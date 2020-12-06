@@ -4,7 +4,7 @@ Date created: 2020-12-05
 
 I have been using Obsidian daily for the past 5 weeks. It is time to create a structure that I can mold my notes into.
 
-Regarding what I wrote 3 weeks ago in [[Obsidian thinking v1]] and what have been done since:
+Regarding what I wrote 3 weeks ago in [[Obsidian Thinking v1]] and what have been done since:
 
 - [x] I wanted to create templates
 - [x] I wanted better folder organization

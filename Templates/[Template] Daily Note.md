@@ -1,4 +1,4 @@
-| [[{{tp_yesterday}}]] | [[Obsidian thinking v2]] | [[{{tp_tomorrow}}]] |
+| [[{{tp_yesterday}}]] | [[Home]] | [[{{tp_tomorrow}}]] |
 | :-: | :-: | :-: |
 
 ## {{today}}
