@@ -1,0 +1,3 @@
+Wikipedia: An emerging market (or an emerging country or an emerging economy) is a market that has some characteristics of a developed market, but does not fully meet its standards. This includes markets that may become developed markets in the future or were in the past.
+
+**The MSCI Emerging Markets Index consists of 26 developing economies** including Argentina, Brazil, Chile, China, Colombia, Czech Republic, Egypt, Greece, Hungary, India, Indonesia, Korea, Malaysia, Mexico, Pakistan, Peru, Philippines, Poland, Qatar, Russia, Saudi Arabia, South Africa, Taiwan, Thailand, Turkey, and the United Arab Emirates. 

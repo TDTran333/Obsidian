@@ -1,0 +1,1 @@
+![[Visual_guide_to_note_taking.jpg]]
