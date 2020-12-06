@@ -5,3 +5,8 @@ data()
 [[with()]]
 [[by()]]
 [[which()]]
+
+prod()
+crossing()
+expand()
+pull()

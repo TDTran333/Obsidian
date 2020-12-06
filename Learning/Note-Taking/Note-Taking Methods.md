@@ -1,6 +1,7 @@
 ---
 aliases: []
 tags: wip, learning
+links: https://www.oxfordlearning.com/5-effective-note-taking-methods/
 ---
 Related: [[Effective Note-Taking]], 
 
@@ -17,19 +18,17 @@ Structure notes in form of an outline by using bullet points to represent differ
 >	* Key fact or thought
 > ...
 
-Ideal when there is a relatively clear structure.
+Ideal for creating questions for review
 
 **Pros**
 
 * Simplicity and ease of use
-* Prioritize / highlight key ideas
+* Outlining records content as well as relationships
 * Reduce reviewing and editing time
-* Proper and clean structure
 
 **Cons**
 
-* Not suitable for some topics
-* Reviewing might be harder if bullet points are not detailed enough
+* Not suitable for some topics that involves formulas or charts
 
 ## 2. The Cornell Method
 
@@ -45,7 +44,7 @@ Ideal for understanding key concepts.
 
 **Pros**
 
-* Notes are neatly organized, summarized, and easy to review 
+* Organized and systematic for recording and reviewing notes
 * Extracts main ideas and concepts
 
 **Cons**
@@ -63,12 +62,12 @@ Summarizing and comparing facts and statistics in a table format.
 | Charting |             |           |      |      |
 | Mapping  |             |           |      |      |
 
-Ideal for comparing, constrasting and memorizing alot of information.
+Ideal for comparing, constrasting and reviewing lots of facts.
 
 **Pros**
 
-* Information is clearly structured
-* Great overview and facilitate reviewing
+* Information is clearly structured and easy to review
+* Highlights key pieces of information for each topic
 
 **Cons**
 
@@ -77,7 +76,7 @@ Ideal for comparing, constrasting and memorizing alot of information.
 
 ## 4: The Mapping Method
 
-Generate linked nodes from the main idea at the center outward to other concepts and establish relationships between the various ideas with arrows and symbols.
+Generate linked nodes or branches from the main idea at the center outward to other concepts and establish relationships between the various ideas with arrows and symbols.
 
 Ideal for visualising connected topics and ideas.
 
@@ -91,6 +90,20 @@ topic_5 <-- Main_idea : generated
 topic_6 <-- Main_idea : lead to
 ```
 
+**Pros**
+
+* Useful for visual learners
+* Helps you remember and connect relationships between topics.
+
+**Cons**
+
+*  
+---
 
 
-
+| Handwritten                                                             | Digital                                                              |
+| ----------------------------------------------------------------------- | -------------------------------------------------------------------- |
+| Easier to create diagrams and illustrations                             | Faster; easier to take higher volume of notes                        |
+| Sometimes better for visual learners                                    | Easier to edit and reorganize for later studying                     |
+| Provides more focus for students prone to digital distraction           | Can be backed up, shared, searched, etc.                             |
+| Can be better for comprehension and retention of conceptual information | Can be better for comprehension and retention of factual information |

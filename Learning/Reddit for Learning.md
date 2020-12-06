@@ -29,3 +29,5 @@ https://old.reddit.com/r/learnmath/
 https://old.reddit.com/r/explainlikeimfive/
 
 https://old.reddit.com/r/excel/
+
+https://old.reddit.com/r/coolguides/
