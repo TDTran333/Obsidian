@@ -269,7 +269,7 @@ img {
 }
 /* img hover zoom out img*/
 img:hover {
-  transform: scale(1.04);
+  transform: scale(1.00);
   transition: transform 0.25s ease-in-out 0s;
 }
 
