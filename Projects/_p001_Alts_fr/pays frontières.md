@@ -1,3 +1,0 @@
-Investopedia: A frontier market is a country that is more established than the least developed countries (LDCs) but still less established than the emerging markets because it is too small, carries too much inherent risk, or is too illiquid to be considered an emerging market.
-
-**Frontier Markets countries include**: Bahrain, Bangladesh, Burkina Faso, Benin, Croatia, Estonia, Guinea-Bissau, Ivory Coast, Jordan, Kenya, Kuwait, Lebanon, Lithuania, Kazakhstan, Mauritius, Mali, Morocco, Niger, Nigeria, Oman, Romania, Serbia, Senegal, Slovenia, Sri Lanka, Togo, Tunisia and Vietnam. Oct 30, 2020

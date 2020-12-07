@@ -1,3 +1,13 @@
+---
+aliases:
+tags:
+links:
+---
+Date: {{tp_today}}
+Related:
+Status: #wip 
+
+---
 # Term
 
 ## Definition
@@ -5,11 +15,5 @@
 
 ## Documentation
 <!-- Link to wiki or youtube video-->
-
-Date: {{tp_today}}
-Tags: #Definition
-Topic: [[Topic - Glossary]]
-Related:
-Status: #wip
 
 

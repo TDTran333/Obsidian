@@ -1,3 +1,0 @@
-https://www.imf.org/external/pubs/ft/fandd/2011/12/basics.htm
-
-Econometrics uses economic theory, mathematics, and statistical inference to quantify economic phenomena. In other words, it turns theoretical economic models into useful tools for economic policymaking. The objective of econometrics is to convert qualitative statements (such as “the relationship between two or more variables is positive”) into quantitative statements (such as “consumption expenditure increases by 95 cents for every one dollar increase in disposable income”).

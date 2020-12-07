@@ -1,1 +1,0 @@
-http://cameronmcefee.com/work/the-octocat/

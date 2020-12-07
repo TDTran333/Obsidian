@@ -1,1 +1,0 @@
-functional, a function that takes a function as an input and returns a vector as output

@@ -1,1 +1,0 @@
-![[Hypothetis_test_chart.jpg]]

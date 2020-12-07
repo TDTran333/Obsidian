@@ -1,20 +1,20 @@
-# Title
-Media:
+---
+aliases:
+tags:
+---
 Date: {{tp_today}}
+Media:
 Author:
 Source:
-Keywords:
 Status: #wip
 
 ---
+# Title
 ## Notes
 <!-- Summarize my thoughts -->
-- 
+*
 
 ## Questions
 <!-- Relevant questions to consider -->
-- 
+*
 
-### Terms
-<!-- Links to definition pages -->
--
