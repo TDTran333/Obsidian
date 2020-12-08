@@ -12,7 +12,7 @@
 
 ## To do
 - [x] Verify reference code
-- [ ] Clean database
+- [x] Clean database
 - [ ] Transition Matrix
 - [ ] Dynamic rolling window analysis
 - [ ] Figure out how to illustrate the results
