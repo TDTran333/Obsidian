@@ -1,1 +1,1 @@
-![[Infographic_psychology_of_hand_writing.jpg|700]]
+![[Infographic_psychology_of_hand_writing.jpg]]

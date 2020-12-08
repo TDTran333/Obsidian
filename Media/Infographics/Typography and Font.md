@@ -1,1 +1,1 @@
-![[Infographic_typography_and_font.png|700]]
+![[Infographic_typography_and_font.png]]

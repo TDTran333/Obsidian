@@ -1,1 +1,1 @@
-![[Infographic_art_of_color_coordination.jpg|700]]
+![[Infographic_art_of_color_coordination.jpg]]

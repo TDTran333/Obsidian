@@ -1,1 +1,1 @@
-![[Infographic_what_code_should_you_learn.jpg|700]]
+![[Infographic_what_code_should_you_learn.jpg]]

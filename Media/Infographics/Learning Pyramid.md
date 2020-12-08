@@ -1,1 +1,1 @@
-![[Infographic_learning_pyramid.png|700]]
+![[Infographic_learning_pyramid.png]]

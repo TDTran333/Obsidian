@@ -1,1 +1,1 @@
-![[Infographic_charts.png|700]]
+![[Infographic_charts.png]]
