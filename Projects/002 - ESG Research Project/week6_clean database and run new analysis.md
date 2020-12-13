@@ -21,3 +21,9 @@
 
 ### Issues
 
+They stop disclosing but the moving average don't catch that
+We take the previous 5-yr window because today's data might not have been updated for this year so we can't assume they stopped disclosing
+
+Two ways to smooth. Moving average 60-mth than summarized on a yearly basis or moving average 5-year of summarized yearly average data.
+
+Question: How to build the transition matrix if some stocks die and we don't get the full years?
