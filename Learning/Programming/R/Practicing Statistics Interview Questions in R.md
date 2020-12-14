@@ -1,5 +1,5 @@
 ---
-aliases: Statistics interview questions
+aliases: Statistics interview questions, R interview questions
 tags: status:wip, R
 ---
 source: [datacamp](https://www.datacamp.com/)
@@ -103,13 +103,111 @@ encoder <- dummyVars(~ category, data = df)
 predict(encoder, newdata = df)
 ```
 
+##### Time series
+* Time series analysis
+	* Trends
+	* Seasonal variation
+	* Serial correlation
+	* Prediction models (Arima, Garch etc.)
+*  xts object in R
+*  [[Data Wrangling|Wrangling]] time series
+	*  Subsetting
+	*  Merging
+	*  Functions over calendar periods
+		*  apply.monthly()
+		*  apply.yearly()
+
+##### Principal components analysis
+* Technique to reduce the dimensions of the dataset
+* PCA allows reducing the number of variables without significant loss of informational value.
+* prcomp(), predict(), summary()
+
+###### prcomp()
+Performs a principal components analysis on the given data matrix and returns the results as an object of class prcomp.
+
+The following parameters of prcomp() reduce dimensions based on:
+
+* `tol` - the standard deviation as percentage of the first component's standard deviation,
+* `rank` - the maximal number of components.
+
 ##### Notes
 * Central tendency measures and skewness
 * The primary purpose of descriptive statistics is to provide a summary of the data. 
 * Measures of central tendency represent the center point of values in a dataset. Measures of variability represent the extent to which a distribution is stretched or squeezed. 
 * A categorical variable is a variable that can take on one of a limited number of possible values.
 * Encoding of categorical data makes them useful for machine learning algorithms.
+* Principal Component Analysis, or PCA, is a dimensionality-reduction method that is often used to reduce the dimensionality of large data sets, by transforming a large set of variables into a smaller one that still contains most of the information in the large set.
+* PCA is essentially a rotation of the coordinate axes, chosen such that each successful axis captures as much variance as possible.
+* In other words: The PCA's first component is the direction in which most of the most variability in the data lies. The second component is 90 degrees to the first component and gives the direction in which the most variability lies after the first principle component has been accounted for. This goes on until you run out of dimensions (determined by the number of variables).
+* We say that 2 vectors are orthogonal if they are perpendicular to each other. i.e. the dot product of the two vectors is zero.
 
 ### Statistical Tests 
+##### Normality tests
+* Testing normality
+	* Statistical test
+		* Shapiro-Wilk test
+		* Kolmogorov-Smirnov test
+	*  Visual measure
+		*  Q-Q plot
+* Transformation of data for normality using log()
+* Checking for normality in R
+
+| Method                  | Function                |
+| :---------------------- | :---------------------- |
+| Shapiro-Wilk test       | shapiro.test (x)        |
+| Kolmogorov-Smirnov test | ks.test(x, Y = "pnorm") |
+| Q-Q plot                | qqnorm(x); qqline(x)    |
+
+`qqplot(x, y)` - produces a Q-Q plot of two datasets,
+`qqnorm(x)` - produces a Q-Q plot against normal distribution.
+`qqline(x)` adds a normal line by default.
+
+##### Inference for a mean
+* Confidence interval
+* One-sample mean
+* T-test assumptions
+	* **Normally distributed ** underlying data
+	* random sample
+	* independent observations
+* T-test in R: 
+	* `t.test(x, mu = mu, conf.level = conf.level)`
+	* `t.test(x)$conf.int`
+
+##### Comparing two means
+* Null hypothesis is that the two samples mean are equal
+* Two-sample t-test assumptions
+	* **Normally distributed ** underlying data 
+	* random sample
+	* independent observations
+* Two-sample (unpaired) t-test vs. paired t-test
+* T-test in R
+	* Two-sample t-test: `t.test(value ~ group, data = df, var.equal = TRUE)`
+	* Paired t-test: `t.test(value ~ group, data = df, paired = TRUE)`
+
+##### ANOVA
+
+##### Notes
+* P-value: probability of observing what we've observed, assuming that the null hypothesis is true. 
+* The Shapiro-Wilk test calculates a W statistic that tests whether a random sample comes from a normal distribution . We look at the p-value to reject h0.
+	* The test has the best power for a given significance level
+* The Kolmogorov-Smirnov Goodness of Fit Test compares your data with a known distribution and lets you know if they have the same distribution.
+* A Q-Q plot is a scatterplot created by plotting two sets of quantiles against one another. If both sets of quantiles came from the same distribution, we should see the points forming a line that's roughly straight.
+* Normal data is an underlying assumption for many statistical tests. 
+* The log transformation can be used to transform skewed data to approximately conform to normality.
+* A t-test is a type of inferential statistic used to determine if there is a significant difference between the means of two groups, which may be related in certain features
+* The confidence interval is a range in which we suspect the population's mean to land.
+* The confidence interval of a population mean is generated from a t statistic and sample mean.
+* The higher the confidence level, the more probable it is that the population's mean lands in the range. 
+* The one-sample t-test is a statistical hypothesis test used to determine whether an unknown population mean is different from a specific value.
+
 
 ### Regression Models 
+##### Covariance and correlation
+
+##### Linear regression model
+
+##### Logistic regression model
+
+##### Model evaluation
+
+##### Notes
