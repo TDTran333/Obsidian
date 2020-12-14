@@ -3,6 +3,8 @@ aliases:
 tags: wip
 ---
 
+> Design your life in such a way that you get constant feedback from your systems to keep focused.
+
 # Home
 
 This page will be used to link and display and the topics on the knowledge vault.

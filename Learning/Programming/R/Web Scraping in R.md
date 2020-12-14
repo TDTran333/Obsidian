@@ -63,15 +63,15 @@ rvest helps you scrape information from web pages. It is designed to work with m
 	*  :last-child
 * The power of CSS selectors often lies in their ability to be combined
 
-| Selector type       | HTML                        | CSS selector  |
-| :------------------ | :-------------------------- | :------------ |
-| Type                | \<p>...\</p>                | p             |
-| Multiple types      | \<p>...\</p><div>...\</div> | p, div        |
-| Class               | \<p class = 'x'>...\</p>    | .x            |
-| Multiple classes    | \<p class = 'x y'>...\</p>  | .x.y          |
-| Type + Class        | \<p class = 'x'>...\</p>    | p.x           |
-| ID                  | \<p id = 'x'>...\</p>       | \#x           |
-| Type + Pseudo-class | \<p>...\</p>\<p>...\</p>    | p:first-child |
+| Selector type       | HTML                         | CSS selector  |
+|:------------------- |:---------------------------- |:------------- |
+| Type                | \<p>...\</p>                 | p             |
+| Multiple types      | \<p>...\</p>\<div>...\</div> | p, div        |
+| Class               | \<p class = 'x'>...\</p>     | .x            |
+| Multiple classes    | \<p class = 'x y'>...\</p>   | .x.y          |
+| Type + Class        | \<p class = 'x'>...\</p>     | p.x           |
+| ID                  | \<p id = 'x'>...\</p>        | \#x           |
+| Type + Pseudo-class | \<p>...\</p>\<p>...\</p>     | p:first-child |
 
 * CSS combinators
 	* "space": Descendant combinator
