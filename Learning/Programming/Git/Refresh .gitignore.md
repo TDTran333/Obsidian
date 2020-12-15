@@ -1,3 +1,5 @@
+git reset HEAD~n
+
 1. Make changes in .gitignore file.
 2. Run git rm -r --cached . command.
 3. Run git add . command
