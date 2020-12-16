@@ -20,3 +20,7 @@ There are several note-taking [[Note-Taking Methods|methods]] one can use to sum
 ## Afterward?
 
 All methods end with the same step: reviewing your notes and increase [[Retention Rate|retention rate]] with [[Active Recall|active recall]] and [[Spaced Repetitions|spaced repetitions]]. 
+
+### Links to read later
+
+http://www.raulpacheco.org/resources/note-taking-techniques/

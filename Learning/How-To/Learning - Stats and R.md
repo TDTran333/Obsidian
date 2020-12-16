@@ -1,5 +1,6 @@
 The Elements of Statistical Learning
 Hastie, Tibshirani and Friedman 
+https://web.stanford.edu/~hastie/ElemStatLearn/
 
 https://moderndive.com/
 Chester Ismay and Albert Y. Kim 
@@ -14,3 +15,9 @@ https://uvastatlab.github.io/phdplus/index.html
 
 Introduction to Econometrics with R
 https://www.econometrics-with-r.org/index.html
+
+ An Introduction to Statistical Learning with Applications in R
+ http://faculty.marshall.usc.edu/gareth-james/ISL/
+ 
+ Computer Age Statistical Inference: Algorithms, Evidence and Data Science
+ https://web.stanford.edu/~hastie/CASI/

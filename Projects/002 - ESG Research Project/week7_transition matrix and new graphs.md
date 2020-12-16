@@ -6,7 +6,7 @@
 ## To do
 - [x] Clean code even more
 - [x] Redo rmd file
-- [ ] [[Transition Matrix]]
+- [x] [[Transition Matrix]]
 - [ ] Verify reference code
 - [ ] Verify graph
 - [ ] Looping analysis
