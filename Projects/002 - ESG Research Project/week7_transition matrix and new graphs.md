@@ -7,10 +7,10 @@
 - [x] Clean code even more
 - [x] Redo rmd file
 - [x] [[Transition Matrix]]
-- [ ] Verify reference code
+- [x] Verify reference code
 - [ ] Verify graph
 - [ ] Looping analysis
-	- [ ] Run analysis with buckets of 5 firms per bucket
+	- [x] Run analysis with buckets of 5 firms per bucket
 	- [ ] Capture all the years
 	- [ ] Modify the lambda parameter
 	- [ ] Modify the hac option
