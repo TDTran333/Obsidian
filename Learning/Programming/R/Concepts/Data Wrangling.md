@@ -1,6 +1,6 @@
 ---
 aliases: Wrangling
-tags: status:wip
+tags: wip, definition
 ---
 Link: [Wikipedia ](https://en.wikipedia.org/wiki/Data_wrangling)
 

@@ -1,5 +1,5 @@
 ---
-tags: "literature notes"
+tags: literature
 ---
 ## Paper title:
 

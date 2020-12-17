@@ -1,10 +1,10 @@
 ---
 aliases: Web Scrapping
-tags: status:complete, R
+tags: R
 ---
 source: [datacamp](https://www.datacamp.com/)
 author: Timo Grossenbacher - Project Lead Automated Journalism at Tamedia
-related: [[library(rvest) + SelectorGadget|library(rvest) example]]
+related: [[library(rvest) + SelectorGadget Vignettes|library(rvest) example]]
 
 ----
 # Web Scraping in R

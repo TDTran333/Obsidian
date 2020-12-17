@@ -1,11 +1,9 @@
+---
+tags: R Markdown, toImprove
+---
+Link: [Website](https://bookdown.org/yihui/rmarkdown/)
+
 # RMarkdown
-
-[[Learning/R]], [[RStudio]]
-https://github.com/rstudio/rmarkdown
-
-https://bookdown.org/yihui/rmarkdown/
-
-
 In a nutshell, R Markdown stands on the shoulders of knitr and Pandoc. The former executes the computer code embedded in Markdown, and converts R Markdown to Markdown. The latter renders Markdown to the output format you want (such as PDF, HTML, Word, and so on).
 
  At this point, there are a large number of tasks that you could do with R Markdown:
@@ -18,6 +16,5 @@ In a nutshell, R Markdown stands on the shoulders of knitr and Pandoc. The forme
  * Write journal articles.
  * Author books of multiple chapters.
  * Generate websites and blogs.
-
 
 https://github.com/resulumit/rmd_workshop/blob/master/presentation/rmd_workshop.pdf

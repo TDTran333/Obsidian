@@ -1,6 +1,6 @@
 ---
 aliases: TidyTuesday - Beer Production
-tags: status:complete, R
+tags: R
 ---
 Link: [YouTube](https://www.youtube.com/watch?v=BUFNZv72ow4)
 

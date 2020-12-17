@@ -1,10 +1,10 @@
 ---
 aliases: R Markdown
-tags: status:complete, R
+tags: R
 ---
 source: [datacamp](https://www.datacamp.com/)
 author: Amy Peterson - Curriculum Manager at DataCamp
-related: [[library(rvest) + SelectorGadget|library(rvest) example]]
+related: [[library(rvest) + SelectorGadget Vignettes|library(rvest) example]]
 
 ----
 # Reporting with R Markdown

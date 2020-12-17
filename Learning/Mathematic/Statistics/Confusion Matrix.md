@@ -1,7 +1,8 @@
-# Confusion Matrix
-
 ---
-## Definition
+tags: definition
+---
+
+# Confusion Matrix
 A confusion matrix is a tabular representation of Actual vs Predicted values.
 
 ![](https://cdn.shortpixel.ai/client/q_glossy,ret_img,w_398,h_196/https://financetrain.com/wp-content/uploads/confusion-matrix.png)
@@ -21,19 +22,3 @@ As you can see, the confusion matrix avoids “confusion” by measuring the act
 **Precision:** It indicates how many values, out of all the predicted positive values, are actually positive. It is formulated as:(TP / TP + FP).
 
 **F Score:** F score is the harmonic mean of precision and recall. It lies between 0 and 1. Higher the value, better the model. It is formulated as 2((precision\*recall) / (precision+recall)).
-
-## Documentation
-<iframe 
-	src="https://en.m.wikipedia.org/wiki/Confusion_matrix"
-		width  = "700"
-		height = "400"
-></iframe>
-
----
-Date: 2020-11-23
-Tags: #Definition
-Topic: [[Topic - Glossary]]
-Related:
-Status: #wip
-
----
