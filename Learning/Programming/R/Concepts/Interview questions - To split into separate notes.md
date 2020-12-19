@@ -26,36 +26,7 @@ Broadly speaking these are different components in grammar of graphics:
 
 RMarkdown is a reporting tool provided by R. With the help of Rmarkdown, you can create high quality reports of your R code. 
 
-The following output formats are available to use with R Markdown.
-
-#### Documents
-
-*   [html\_notebook](https://bookdown.org/yihui/rmarkdown/notebook.html) - Interactive R Notebooks
-*   [html\_document](https://bookdown.org/yihui/rmarkdown/html-document.html) - HTML document w/ Bootstrap CSS
-*   [pdf\_document](https://bookdown.org/yihui/rmarkdown/pdf-document.html) - PDF document (via LaTeX template)
-*   [word\_document](https://bookdown.org/yihui/rmarkdown/word-document.html) - Microsoft Word document (docx)
-*   [odt\_document](https://bookdown.org/yihui/rmarkdown/opendocument-text-document.html) - OpenDocument Text document
-*   [rtf\_document](https://bookdown.org/yihui/rmarkdown/rich-text-format-document.html) - Rich Text Format document
-*   [md\_document](https://bookdown.org/yihui/rmarkdown/markdown-document.html) - Markdown document (various flavors)
-
-#### Presentations (slides)
-
-*   [ioslides\_presentation](https://bookdown.org/yihui/rmarkdown/ioslides-presentation.html) - HTML presentation with ioslides
-*   [revealjs::revealjs\_presentation](https://bookdown.org/yihui/rmarkdown/revealjs.html) - HTML presentation with reveal.js
-*   [slidy\_presentation](https://bookdown.org/yihui/rmarkdown/slidy-presentation.html) - HTML presentation with W3C Slidy
-*   [beamer\_presentation](https://bookdown.org/yihui/rmarkdown/beamer-presentation.html) - PDF presentation with LaTeX Beamer
-*   [powerpoint\_presentation](https://bookdown.org/yihui/rmarkdown/powerpoint-presentation.html): PowerPoint presentation
-
-#### More
-
-*   [flexdashboard::flex\_dashboard](/flexdashboard/) - Interactive dashboards
-*   [tufte::tufte\_handout](https://bookdown.org/yihui/rmarkdown/tufte-handouts.html) - PDF handouts in the style of Edward Tufte
-*   [tufte::tufte\_html](https://bookdown.org/yihui/rmarkdown/tufte-handouts.html) - HTML handouts in the style of Edward Tufte
-*   [tufte::tufte\_book](https://bookdown.org/yihui/rmarkdown/tufte-handouts.html) - PDF books in the style of Edward Tufte
-*   [html\_vignette](https://bookdown.org/yihui/rmarkdown/r-package-vignette.html) - R package vignette (HTML)
-*   [github\_document](/github_document_format.html) - GitHub Flavored Markdown document
-
-You can also build [books](https://bookdown.org/), [websites](https://bookdown.org/yihui/rmarkdown/rmarkdown-site.html), and [interactive documents](https://bookdown.org/yihui/rmarkdown/shiny-documents.html) with R Markdown.
+![[Output Formats of R Markdown]]
 
 ### 4. What are the steps to build and evaluate a linear regression model in R?
 
@@ -126,28 +97,9 @@ Let us see why clustering is required in data analysis:
 * Ability to deal with noisy data − Databases contain noisy, missing or erroneous data. Some algorithms are sensitive to such data and may lead to poor quality clusters.
 * Interpretability − The clustering results should be interpret-able, comprehensible, and usable.
 
-##### K-MEANS clustering:
+![[K-Means Clustering]]
 
-K-means clustering is a well known partitioning method. In this method objects are classified as belonging to one of K-groups. The results of partitioning method are a set of K clusters, each object of data set belonging to one cluster. In each cluster there may be a centroid or a cluster representative. In the case where we consider real-valued data, the arithmetic mean of the attribute vectors for all objects within a cluster provides an appropriate representative; alternative types of centroid may be required in other cases.
-
-Example: A cluster of documents can be represented by a list of those keywords that occur in some minimum number of documents within a cluster. If the number of the clusters is large, the centroids can be further clustered to produce hierarchy within a dataset. K-means is a data mining algorithm which performs clustering of the data samples. In order to cluster the database, K-means algorithm uses an iterative approach.
-
-A robust version of K-means based on mediods can be invoked by using pam( ) instead of kmeans( ). The function pamk( ) in the fpc package is a wrapper for pam that also prints the suggested number of clusters based on optimum average silhouette width.
-
-##### Hierarchical Clustering:
-
-This method creates a hierarchical decomposition of the given set of data objects. We can classify hierarchical methods on the basis of how the hierarchical decomposition is formed. There are two approaches here:
-
-1.  Agglomerative Approach
-2.  Divisive Approach
-
-Agglomerative Approach:
-
-This approach is also known as the bottom-up approach. In this, we start with each object forming a separate group. It keeps on merging the objects or groups that are close to one another. It keeps on doing so until all of the groups are merged into one or until the termination condition holds.
-
-Divisive Approach:
-
-This approach is also known as the top-down approach. In this, we start with all of the objects in the same cluster. In the continuous iteration, a cluster is split up into smaller clusters. It is down until each object in one cluster or the termination condition holds. This method is rigid, i.e., once a merging or splitting is done, it can never be undone.
+![[Hierarchical Clustering]]
 
 ### 10. What do you know about the rattle package in R?
 
@@ -217,10 +169,5 @@ Conceptually, factors are variables in R which take on a limited number of diffe
 
 ### 17. Name some functions which can be used for debugging in R?
 
-These are some functions which can be used for debugging in R:
+![[Debugging in R]]
 
-*   traceback()
-*   debug()
-*   browser()
-*   trace()
-*   recover()

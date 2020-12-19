@@ -2,12 +2,6 @@ Building R Packages in RStudio
  	
 ![[Pasted image 20201113172426.png]]
 
-
-
-
-
-
-
 devtools::use_package()
 devtools::load_all()
 usethis::use_testthat() devtools::test()

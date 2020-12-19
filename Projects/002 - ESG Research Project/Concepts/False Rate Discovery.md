@@ -16,3 +16,6 @@ Sermpinis, Georgios, Arman Hassanniakalager, Charalampos Stasinakis, and Ioannis
 [[Barras_Scaillet_Wermers_2010_False_Discoveries_in_Mutual_Fund_Performance]]
 
 > Besides its financial interpretation, the FDR also has a natural statistical meaning, as it is the extension of the Type I error (i.e., rejecting the null, H0, when it is correct) from single to multiple hypothesis testing. In the single case, the Type I error is controlled by using the significance level (i.e., the size of the test). In the multiple case, we replace with the FDR, which is a compound Type I error easure. In both cases, we face a similar trade-off: In order to increase power, we have to increase or the FDR, respectively (see the survey of Romano, Shaikh, and Wolf (2008)).
+
+> “false discoveries”—funds with
+significant estimated alphas, but zero true alphas.

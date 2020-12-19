@@ -1,1 +1,0 @@
-"discoveries" (rejected null hypotheses)

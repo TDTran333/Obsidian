@@ -10,7 +10,7 @@ author: Jeroen Boeye - Machine Learning Engineer @ Faktion
 ### Tidy data
 Tidy data is a standard way of mapping the meaning of a dataset to its structure. A dataset is messy or tidy depending on how rows, columns and tables are matched up with observations, variables and types. In tidy data: Each variable forms a column. Each observation forms a row.
 
-##### Concepts
+#### Concepts
 * Multiple variables per column
 	* Use seperate functions
 * Missing Values
@@ -39,7 +39,7 @@ Fill in missing values with previous or next value.
 Drop rows containing missing values.
 
 ### From wide to long and back 
-##### Concepts
+#### Concepts
 * Deriving variables from column headers
 * Deriving variables from complex column headers
 * From long to wide data
@@ -47,6 +47,7 @@ Drop rows containing missing values.
 	* Step 1: pivot_longer()
 	* step 2: pivot_wider()
 
+#### Functions
 ##### pivot_longer()
 pivot_longer() "lengthens" data, increasing the number of rows and decreasing the number of columns. 
 
@@ -86,11 +87,17 @@ scale_x_discrete() and scale_y_discrete() are used to set the values for discret
 Select variables that match a pattern.
 
 ### Expanding data 
-##### Concepts
+#### Concepts
 * Creating unique combinations of vectors with expand_grid()
 * Find values missing from dataframe with expand_grid() + anti_join()
-* Completing data with all value combinations
+* Completing data with all value combinations with complete and full_seq()
+* Advanced completions
+	* Nesting connected variables with nesting() inside complete()
+	* Counting simultaneous events by the sequence of
+		* pivot_longer() , complete(date = full_seq()), group_by(), then count()
+	* Timestamp completions for time series
 
+#### Functions
 ##### expand_grid()
 Create a tibble from all combinations of inputs.
 
@@ -103,4 +110,44 @@ Complete a data frame with missing combinations of data.
 ##### full_seq()
 This is useful if you want to fill in missing values that should have been observed but weren't.
 
+##### seq()
+Generate regular sequences. seq is a standard generic with a default method.
+
+##### nesting()
+nesting() is a helper that only finds combinations already present in the data. It tells complete() to consider it as a single variable.
+
+##### geom_rect()
+Generate a rectange in the plot.
+
+###### Example
+```R
+df %>%
+ggplot(aes(date, total_bombs, color = country)) +
+  # These two lines will mark the Cuban Missile Crisis 
+  geom_rect(xmin = as.Date("1962-10-16"), xmax = as.Date("1962-10-29"), ymin = -Inf, ymax = Inf, color = NA)+ 
+  geom_text(x = as.Date("1962-10-22"), y = 15, label = "Cuban Missile Crisis", angle = 90, color = "white")+
+  geom_line()
+```
+
 ### Rectangling data 
+#### Concepts
+* Non-rectangular data like JSON or XML
+* Unnnesting lists to columns and rows with unnest_wider() and unnest_longer()
+	* These are the two situations where it is clear which unnesting function to try: named lists of fixed length = unnest_wider(), unnamed lists of varying length = unnest_longer(). There are other situations, like named lists with varying number of elements, where some trial and error will be necessary.
+* Selecting nested variables using hoist()
+* Nesting data for modeling with broom + purrr + dplyr + tidyr
+	* The tidyr nest() function will nest a subset of a data frame based on some grouping variable. The result is a list column, data that has tibbles inside. 
+	* map() function from the purrr package to apply a function to each tibble individually. 
+	* Using purrr's map() function once more, we can apply broom's glance() or tidy() function on this fitted model.
+	* unnest our model results using tidyr's unnest() function on the glanced column. 
+	* We get a tidy overview of the model metrics. 
+
+##### unnest_wider()
+unnest_wider() turns each element of a list-column into a column.
+
+##### unnest_longer()
+unnest_longer() turns each element of a list-column into a row.
+
+##### hoist()
+hoist() allows you to selectively pull components of a list-column out in to their own top-level columns.
+

@@ -1,7 +1,8 @@
 ---
-link:https://www.cracked.com/blog/6-harsh-truths-that-will-make-you-better-person/
+link:
 ---
-Author: David Wong
+Link: [Website](https://www.cracked.com/blog/6-harsh-truths-that-will-make-you-better-person/)
+Author: [David Wong](https://en.wikipedia.org/wiki/David_Wong_(writer))
 
  - The World Only Cares About What It Can Get from You
  -  The difference in those two attitudes -- bitter vs. motivated -- largely determines whether or not you'll succeed in the world

@@ -1,4 +1,4 @@
-https://www.enjine.com/blog/low-signal-noise-ratio-really-problem-financial-machine-learning/
+Link: [Website](https://www.enjine.com/blog/low-signal-noise-ratio-really-problem-financial-machine-learning/)
 
 Quants generally divide asset price movements into two components--signal and noise. Signal is the portion we can understand, model and predict. For example, companies that reported good earnings have historically seen their stock prices go up, and the average amount by which companies’ stock prices have risen is considered the signal. The noise component, on the other hand, consists of the unpredictable component of price movements.
 

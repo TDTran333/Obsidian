@@ -4,11 +4,18 @@ tags: R
 ---
 Link: [Website](https://tidyr.tidyverse.org/reference/index.html)
 
-# Reference
+# tidyr package
+The goal of tidyr is to help you create tidy data. Tidy data is data where:
+
+* Every column is variable.
+* Every row is an observation.
+* Every cell is a single value.
+
+## Functions
 ### Pivoting
 Pivoting changes the representation of a rectangular dataset, without changing the data inside of it. See vignette("pivot") for more details and examples.
 
-| function       | definition                                      |
+| Function       | Definition                                      |
 | :------------- | :---------------------------------------------- |
 | pivot_longer() | Pivot data from wide to long                    |
 | pivot_wider()  | Pivot data from long to wide                    |
@@ -18,7 +25,7 @@ Pivoting changes the representation of a rectangular dataset, without changing t
 ### Rectangling
 Rectangling turns deeply nested lists into tidy tibbles. See vignette("rectangle") for more details and examples.
 
-| function        | definition                                 |
+| Function        | Definition                                 |
 |:--------------- |:------------------------------------------ |
 | hoist()         | Rectangle a nested list into a tidy tibble |
 | unnest_longer() | "                                          |
@@ -28,7 +35,7 @@ Rectangling turns deeply nested lists into tidy tibbles. See vignette("rectangle
   ### Nesting
 Nesting uses alternative representation of grouped data where a group becomes a single row containing a nested data frame. See vignette("nest") for more details and examples.
 
-| function | definition |
+| Function | Definition |
 |:-------- |:---------- |
 | nest()   | -          |
 | unnest() | -          |
@@ -36,7 +43,7 @@ Nesting uses alternative representation of grouped data where a group becomes a 
 ### Character vectors
 Multiple variables are sometimes pasted together into a single column, and these tools help you separate back out into individual columns.
 
-| function        | definition                                                                                       |
+| Function        | Definition                                                                                       |
 |:--------------- |:------------------------------------------------------------------------------------------------ |
 | extract()       | Extract a character column into multiple columns using regular expression groups                 |
 | separate()      | Separate a character column into multiple columns with a regular expression or numeric locations |
@@ -46,7 +53,7 @@ Multiple variables are sometimes pasted together into a single column, and these
 ### Missing values
 Tools for converting between implicit (absent rows) and explicit (NA) missing values, and for handling explicit NAs.
 
-| function      | definition                                                       |
+| Function      | Definition                                                       |
 |:------------- |:---------------------------------------------------------------- |
 | complete()    | Complete a data frame with missing combinations of data          |
 | drop_na()     | Drop rows containing missing values                              |
@@ -59,7 +66,7 @@ Tools for converting between implicit (absent rows) and explicit (NA) missing va
 | replace_na()  | Replace NAs with specified values                                |
 
 ### Miscellanea
-| function        | definition                  |
+| Function        | Definition                  |
 |:--------------- |:--------------------------- |
 | chop() unchop() | Chop and unchop             |
 | pack() unpack() | Pack and unpack             |
