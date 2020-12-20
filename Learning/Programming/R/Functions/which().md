@@ -11,8 +11,6 @@ which(mydata$v1==max(mydata$v1))
 
 It returns 3 as 12 is the maximum value and it is at the 3rd row in the variable x=v1.
 
-## Documentation
-<!-- Link to wiki or youtube video-->
 
 
 ---

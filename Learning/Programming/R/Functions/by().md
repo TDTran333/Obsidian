@@ -11,9 +11,6 @@ The by( ) function applys a function to each level of a factor or factors. It is
 by(mydata, mydata$byvar, function(x) mean(x))
 ```
 
-## Documentation
-<!-- Link to wiki or youtube video-->
-
 
 ---
 Date: 2020-11-23

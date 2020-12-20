@@ -10,8 +10,6 @@ The modified Sharpe Ratio is the effective return divided by the modified Value 
 
 μ and σ are the mean and standard deviation, S is skew, K is kurtosis, z$_c$ is the quantile of the distribution and Z is the Cornish-Fisher asymptotic expansion for the quantile of a non-gaussian distribution.
 
-## Documentation
-<!-- Link to wiki or youtube video-->
 
 Date: 2020-12-01
 Tags: #Definition

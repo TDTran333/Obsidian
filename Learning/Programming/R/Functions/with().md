@@ -10,9 +10,6 @@ The with( ) function applys an expression to a dataset. It is similar to DATA= i
 with(mydata, t.test(y ~ group))
 ```
 
-## Documentation
-<!-- Link to wiki or youtube video-->
-
 
 ---
 Date: 2020-11-23

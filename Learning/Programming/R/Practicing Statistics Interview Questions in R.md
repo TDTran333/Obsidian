@@ -1,6 +1,6 @@
 ---
 aliases: Statistics interview questions, R interview questions
-tags: status:wip, R
+tags: R, stats
 ---
 source: [datacamp](https://www.datacamp.com/)
 author: Zuzanna Chmielewska - Actuary
@@ -153,8 +153,8 @@ The following parameters of prcomp() reduce dimensions based on:
 * Checking for normality in R
 
 | Method                  | Function                |
-| :---------------------- | :---------------------- |
-| Shapiro-Wilk test       | shapiro.test (x)        |
+|:----------------------- |:----------------------- |
+| Shapiro-Wilk test       | shapiro.test(x)         | 
 | Kolmogorov-Smirnov test | ks.test(x, Y = "pnorm") |
 | Q-Q plot                | qqnorm(x); qqline(x)    |
 
@@ -167,8 +167,8 @@ The following parameters of prcomp() reduce dimensions based on:
 * One-sample mean
 * T-test assumptions
 	* **Normally distributed ** underlying data
-	* random sample
-	* independent observations
+	* Random sample
+	* Independent observations
 * T-test in R: 
 	* `t.test(x, mu = mu, conf.level = conf.level)`
 	* `t.test(x)$conf.int`
@@ -177,18 +177,32 @@ The following parameters of prcomp() reduce dimensions based on:
 * Null hypothesis is that the two samples mean are equal
 * Two-sample t-test assumptions
 	* **Normally distributed ** underlying data 
-	* random sample
-	* independent observations
+	* Random sample
+	* Independent observations
+	* Homogeneity of variances
+		* [[bartlett.test()|Bartlett]]'s test is used to test if k samples have equal variances.
 * Two-sample (unpaired) t-test vs. paired t-test
 * T-test in R
 	* Two-sample t-test: `t.test(value ~ group, data = df, var.equal = TRUE)`
 	* Paired t-test: `t.test(value ~ group, data = df, paired = TRUE)`
 
 ##### ANOVA
+* ANalysis Of VAriance
+* Test for multiple means using variance
+* Why not multiple t-test?
+	* Introduce multiple type I and type II errors
+* ANOVA control for errors so that type I error remains at target %.
+* ANOVA assumptions
+	* Independence of cases
+	* Normal distributions
+	* Homogeneity of variances
+* ANOVA in R
+	* `oneway.test(value ~ group, data, var.equal = TRUE)`
+* Boxplot to visualize  (Q1, Q3, IQR, min(Q1-1.5 x IQR), max (Q3+1.5 IQR), outliers)
 
 ##### Notes
 * P-value: probability of observing what we've observed, assuming that the null hypothesis is true. 
-* The Shapiro-Wilk test calculates a W statistic that tests whether a random sample comes from a normal distribution . We look at the p-value to reject h0.
+* The Shapiro-Wilk test calculates a W statistic that tests whether a random sample comes from a normal distribution . We look at the p-value to reject $h_0$.
 	* The test has the best power for a given significance level
 * The Kolmogorov-Smirnov Goodness of Fit Test compares your data with a known distribution and lets you know if they have the same distribution.
 * A Q-Q plot is a scatterplot created by plotting two sets of quantiles against one another. If both sets of quantiles came from the same distribution, we should see the points forming a line that's roughly straight.
@@ -199,15 +213,58 @@ The following parameters of prcomp() reduce dimensions based on:
 * The confidence interval of a population mean is generated from a t statistic and sample mean.
 * The higher the confidence level, the more probable it is that the population's mean lands in the range. 
 * The one-sample t-test is a statistical hypothesis test used to determine whether an unknown population mean is different from a specific value.
-
+* The two-sample t-test (also known as the independent samples t-test) is a method used to test whether the unknown population means of two groups are equal or not.
+* The one-way analysis of variance (ANOVA) is used to determine whether there are any statistically significant differences between the means of three or more independent (unrelated) groups.
 
 ### Regression Models 
 ##### Covariance and correlation
+* Covariance is a measure of the joint variability of two random variables. 
+	* For a sample, you divide by n minus 1, for the population, divide by n
+* The correlation coefficient is measure of a linear relationship between two variables.
+* Correlation does not imply causation.
 
 ##### Linear regression model
+* Linear regression model
+	* Dependent variable also called response
+	* Independent variables or explanatory variables
+	* Parameters
+	* Error term
+* Linear predictor function
+	*  The beta coefficients reflect the degree of change in the outcome variable for every one unit of change in the predictor variables. 
+* Assumptions
+	* Linear relationship
+	* Normally distributed errors
+	* Homoscedastic errors (variance must be uniform) 
+	* Independent observations 
+* Linear model in R
+	* lm()
+	* predict()
+	* plot() for diagnostic plots
+		* The first plot shows if the residuals have non-linear patterns. 
+		* The second plot shows a Q-Q plot to see if residuals are normally distributed. 
+		* The third plot shows if residuals are spread equally along the ranges of predictors.
+		* The last plot helps us to find influential cases.
 
 ##### Logistic regression model
+* Logistic regession model
+	* Go-to method for binary classification problems
+	* Estimates the value of p, which is the probability that y amounts to 1
+	* Logit is a logarithm of the odds
+* Logistic function
+	*  Takes only values from the range 0 to 1. And so does the probability. 
+* Prediction of a binary response variable
+	*  The rule of thumb says that if the returned value is above 0.5, we predict one. Otherwise, we predict zero. 
+* Logistic regression in R 
+	* `glm(formula, data, family = "binomial")`
+	* `predict(model, data, type = "response")`
 
 ##### Model evaluation
-
-##### Notes
+* Training set and test set
+* K-fold cross-validation
+* Confusion matrix & Classification metrics
+	* Accuracy
+	* Precision
+	* Recall
+* Regression metrics
+	* Root Mean Squared Error (correct for large errors) `Metrics::rmse() `
+	* Mean Absolute Error (straightforward) `Metrics::mae()`
