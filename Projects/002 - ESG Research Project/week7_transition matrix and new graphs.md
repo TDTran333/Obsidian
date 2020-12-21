@@ -12,11 +12,11 @@
 	- [ ] Requires daily observations and aggregating to yearly because monthly is not enough
 - [ ] Looping analysis
 	- [x] Run analysis with buckets of 5 firms per bucket
-	- [ ] Capture all the years
-	- [ ] Save graph to png automatically
-	- [ ] Calculate % of outperformance over time
+	- [x] Capture all the years
+	- [x] Save graph to png automatically
+	- [x] Calculate % of outperformance over time
 - [ ] Test different options 
-	- [ ] Modify the lambda parameter
+	- [ ] Modify the lambda parameter - ended not needed
 	- [ ] Modify the hac option
 	
 ### Notes
