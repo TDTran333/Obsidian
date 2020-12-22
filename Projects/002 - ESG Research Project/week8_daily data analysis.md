@@ -8,8 +8,8 @@ What's the plan B if the results aren't good or useful?
 - [x] Plots over time
 - [ ] Correlation histograms
 - [ ]  [[Concordant]] observations histograms
-- [ ]  Daily results
-- [ ] Analysis and summary of results in powerpoint
+- [x]  Daily results
+- [x] Analysis and summary of results in powerpoint
 
 ### Notes
 

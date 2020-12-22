@@ -61,3 +61,6 @@ print prints its argument and returns it invisibly (via invisible(x)).
 
 ##### gml()
 glm is used to fit generalized linear models, specified by giving a symbolic description of the linear predictor and a description of the error distribution.
+
+##### findInterval()
+Given a vector of non-decreasing breakpoints in vec, find the interval containing each element of x.

@@ -14,3 +14,5 @@
 [Hands-On Programming with R](https://rstudio-education.github.io/hopr/)
 [YaRrr! The Pirate’s Guide to R](https://bookdown.org/ndphillips/YaRrr/)
 [Forecasting: Principles and Practice](https://otexts.com/fpp2/)
+[Statistical rethinking with brms, ggplot2, and the tidyverse](https://bookdown.org/content/3890)
+[Statistical Inference via Data Science](https://moderndive.com/)
