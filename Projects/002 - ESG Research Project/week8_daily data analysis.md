@@ -6,8 +6,8 @@ What's the plan B if the results aren't good or useful?
 ## To do
 - [x] Averages
 - [x] Plots over time
-- [ ] Correlation histograms
-- [ ]  [[Concordant]] observations histograms
+- [x] Correlation histograms
+- [x]  [[Concordant]] observations histograms
 - [x]  Daily results
 - [x] Analysis and summary of results in powerpoint
 

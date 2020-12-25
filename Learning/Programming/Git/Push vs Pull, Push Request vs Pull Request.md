@@ -9,4 +9,4 @@ A "pull request" is you requesting the target repository to please grab your cha
 
 A "push request" would be the target repository requesting you to push your changes.
 
-[[Github - Pull Request]]
+[[Pull Request]]

@@ -1,2 +1,0 @@
-# RStudio
-[[Learning/R]]

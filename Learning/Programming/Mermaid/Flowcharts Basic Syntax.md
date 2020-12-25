@@ -1,7 +1,9 @@
-https://unpkg.com/mermaid@0.5.3/dist/www/all.html#mermaid
-https://unpkg.com/mermaid@0.5.3/dist/www/all.html#flowcharts-basic-syntax
-### Pie Charts
+---
+tags: mermaid
+---
+Link: https://unpkg.com/mermaid@0.5.3/dist/www/all.html#flowcharts-basic-syntax
 
+### Pie Charts
 ```mermaid
 pie 
 	title Random
@@ -11,7 +13,6 @@ pie
 ```
 
 ### Graphs
-
 ```mermaid
 graph TD
 A --> B
@@ -39,7 +40,6 @@ graph RL
 ```
 
 ### Shapes
-
 ```mermaid
 graph TD
 	A[Normal] -->
@@ -55,17 +55,13 @@ graph TD
 	K[\Parallelogram\] -->
 	L[/Trapezoid\] -->
 	M[\Trapezoid/]
-	
-	
 ```
 
 ### Link shape
-
 ```mermaid
 graph LR
 	A --> B -.-> C --- D --Text--> E -->|Text| F
 	G -.Text.-> H ==> I == Text ==> J
-	
 ```
 
 ### Styling

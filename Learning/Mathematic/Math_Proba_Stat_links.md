@@ -1,13 +1,10 @@
 Intro to Descriptive Statistics
-
 https://www.udacity.com/course/intro-to-descriptive-statistics--ud827
 
 Probability - The Science of Uncertainty and Data
-
 https://www.edx.org/course/probability-the-science-of-uncertainty-and-data
 
 Data Science: Probability
-
 https://www.edx.org/course/data-science-probability
 
 Intro to Inferential Statistics

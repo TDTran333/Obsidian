@@ -1,3 +1,6 @@
+---
+tags: git
+---
 git reset HEAD~n
 
 1. Make changes in .gitignore file.

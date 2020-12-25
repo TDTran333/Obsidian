@@ -1,8 +1,9 @@
-https://mermaid-js.github.io/mermaid/#/
-https://www.youtube.com/watch?v=rXhUeV5Ko7g
-
+---
+tags: mermaid
+---
+Link: [Website](https://mermaid-js.github.io/mermaid/#/), [YouTube](https://www.youtube.com/watch?v=rXhUeV5Ko7g)
 ### Diagrams that mermaid can render
-### [](Mermaid%20-%20Examples#/?id=flowchart)[Flowchart](https://mermaid-js.github.io/mermaid/#/flowchart?id=flowcharts-basic-syntax)
+### [](Diagrams%20Types.md#/?id=flowchart)[Flowchart](https://mermaid-js.github.io/mermaid/#/flowchart?id=flowcharts-basic-syntax)
 TD = Top Down
 ```mermaid
 graph TD

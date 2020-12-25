@@ -1,1 +1,0 @@
-Detect the presence or absence of a pattern in a string.
