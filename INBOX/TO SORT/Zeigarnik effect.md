@@ -1,0 +1,1 @@
+Named after Soviet psychologist Bluma Zeigarnik, in psychology the Zeigarnik effect occurs when an activity that has been interrupted may be more readily recalled. It postulates that people remember unfinished or interrupted tasks better than completed tasks.[](https://en.wikipedia.org/wiki/Zeigarnik_effect)

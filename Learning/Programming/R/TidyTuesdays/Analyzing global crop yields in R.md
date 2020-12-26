@@ -55,9 +55,15 @@ The JavaScript library [selectize.js](https://selectize.github.io/selectize.js/)
 See https://shiny.rstudio.com/articles/selectize.html for more info.
 
 ##### renderPlot()
-Renders a reactive plot that is suitable for assigning to an output slot.
+Renders a reactive plot that is suitable for assigning to an output slot
+
+##### renderPlotly()
+Output and render functions for using plotly within Shiny applications and interactive Rmd documents.
 
 ##### checkboxInput()
+Create a checkbox that can be used to specify logical values.
 
+##### radioButtons()
+Create a set of radio buttons used to select an item from a list.
 
 
