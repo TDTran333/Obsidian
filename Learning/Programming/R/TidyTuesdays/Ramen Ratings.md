@@ -2,10 +2,8 @@
 aliases: TidyTuesday - Ramen Ratings
 tags: wip, R
 ---
-sources: [Youtube](https://www.youtube.com/watch?v=tCa2di7aEP4), [Annotations](https://github.com/dgrtwo/data-screencasts/tree/master/screencast-annotations#ramen-reviews), [Ramen Rater](https://www.theramenrater.com/resources-2/the-list/)
-author: David Robinson - Principal Data Scientist at Heap
+Links: [Youtube](https://www.youtube.com/watch?v=tCa2di7aEP4), [Annotations](https://github.com/dgrtwo/data-screencasts/tree/master/screencast-annotations#ramen-reviews), [Ramen Rater](https://www.theramenrater.com/resources-2/the-list/)
 
----
 # TidyTuesday - Ramen Ratings
 ### Data
 | variable      | class | description                                       |
