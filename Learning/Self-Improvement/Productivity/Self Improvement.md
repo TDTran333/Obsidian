@@ -5,6 +5,7 @@ Document : [[Top Reddit Threads - Cheat Sheet.pdf]]
 
 ## Success
 ### Attidute
+* Be curious
 * Be an optimist
 * Be 100% authentic 
 * Show gratitude

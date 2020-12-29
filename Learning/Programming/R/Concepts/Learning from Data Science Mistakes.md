@@ -62,10 +62,76 @@ Communication is harder than tech.
 * Data munging decisions hid errors
 * Lack of shared resources explaining what the data was
 
-#### Lessons about communication with Devs
+#### Learnings about communication with Devs
 * Be willing to teach, and to learn (respectfully)
 * Don't play telephone
 * Avoid jargon for clarity
 * Same team! (Focus on common goals)
 
 #### Mistakes regarding communicating with Business Stakeholders
+Don't roll out several features at the same time
+
+Communicate the value of the data
+How to frame your analysis for anyone
+The rhetorical triangle consist of three parts: 
+Speaker: Credentials and awareness of how people see analytics within the organization
+Audience: What is the audience? Are they technical or non-technical? Are they informed?
+Do they make decisions as part of a larger meeting? Who are you talking to?
+Context: Are you delivering good news or bad news? What are you asking for? What can they help with? Do they understand the kind of problems you have?
+
+#### Data Meta-Metrics
+
+##### Relevance
+a. Data is perfectly relevant and usable as-is to make important decisions.
+b. Data is useful to add color to arguments or decisions but isn't a single definitive source of truth by itself
+c. We don't recommend using this data to make important decisions
+
+##### Trustworthiness
+a. We trust this data, including the source and  the way it's captured, and feel comfortable using it to make important decisions.
+b. We have some reservations with this data -- could be based on the way it's created, accessed, or an unexplained weirdness.
+c. We don't trust this data due to the way it is collected or stored in current state.
+
+##### Repeatability
+a. The proces to get this metric is fully automated or automatable.
+b. The process to get this data is standardized, but not fully automatable (involves a manual download or have to go through a point person).
+c. Data does not live in a database; the process to get this data is very manual and cannot be automated in current state.
+
+#### Learnings about communication with Business Stakeholders
+* Get stakeholders involved early
+* Make sure you understand the business problem
+* Frame analyses in a way that makes sense, use proper terminology in the business
+* Basiscs: who, what, how many?
+* Know where to get their data
+
+#### Problems regarding Infrastructure / Team
+Need documentations in case people leave
+
+Write pseudocode
+* Inputs
+* Outputs
+* Business problem you're trying to solve
+* Process
+* Explanation
+* ...all in plain English
+
+#### Learnings about Infrastructure / Team
+* Documentation
+	* Data dictionaries
+	* SQL query library
+* Code review
+* Core team meetings
+* Pseudocode
+
+Context is key.
+
+### Advice for aspiring data scientists
+* Learn SQL
+* Communication is a technical skill
+* Start a blog
+* Teach others
+* Don't worry about learning everything at first
+* Find your community
+* Stay curious
+* Have fun
+* Don't be afraid to Google
+* Everyone is winging it
