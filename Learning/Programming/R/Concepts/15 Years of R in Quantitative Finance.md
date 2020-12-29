@@ -7,7 +7,6 @@ Link: [YouTube](https://www.youtube.com/watch?v=3sroV_RltQA)
 > Better data analysis requires reproducibility and scalability.
 
 ### Using R to do better analysis (Spend more time analysing instead of manipulating data)
-
 Good analysis depends on sound data.
 Reported data is formatted for printing, not for processing.
 How do we scale the analysis?
@@ -38,7 +37,6 @@ Better analysis with R
 * Robust to future change
 
 ### Build models that you can't buy on marketplace
-
 Build on Shiny for portfolio holdings and stock analysis
 Custom-made for firm's needs
 

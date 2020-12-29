@@ -4,7 +4,6 @@ tags: R
 Link: [YouTube](https://www.youtube.com/watch?v=L-kRMiYwRC4)
 
 # R + Tidyverse in Sports
-
 ### Hockey analytics with R
 Features used
 Adjustment to the data
