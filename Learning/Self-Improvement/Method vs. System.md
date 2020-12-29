@@ -1,8 +1,7 @@
 ---
 tags: definition
 ---
-
-Link: https://www.differencebetween.com/difference-between-method-and-vs-system/
+Link: [Website](https://www.differencebetween.com/difference-between-method-and-vs-system/)
 
 Method and System are two words that are often confused due to the similarity in their meanings. There is in fact some difference between method and system.
 
