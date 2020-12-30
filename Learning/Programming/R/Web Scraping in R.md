@@ -2,8 +2,6 @@
 aliases: Web Scrapping
 tags: R
 ---
-source: [datacamp](https://www.datacamp.com/)
-author: Timo Grossenbacher - Project Lead Automated Journalism at Tamedia
 related: [[library(rvest) + SelectorGadget Vignettes|library(rvest) example]]
 
 ----

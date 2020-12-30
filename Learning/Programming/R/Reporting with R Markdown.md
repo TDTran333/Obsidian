@@ -2,11 +2,7 @@
 aliases: R Markdown
 tags: R
 ---
-source: [datacamp](https://www.datacamp.com/)
-author: Amy Peterson - Curriculum Manager at DataCamp
-related: [[library(rvest) + SelectorGadget Vignettes|library(rvest) example]]
 
-----
 # Reporting with R Markdown
 ### Getting Started with R Markdown
 * Knitting R Markdown File

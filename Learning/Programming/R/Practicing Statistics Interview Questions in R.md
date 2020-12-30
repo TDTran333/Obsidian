@@ -2,10 +2,7 @@
 aliases: Statistics interview questions, R interview questions
 tags: R, stats
 ---
-source: [datacamp](https://www.datacamp.com/)
-author: Zuzanna Chmielewska - Actuary
 
----
 # Practicing Statistics Interview Questions in R
 ### Probability Distributions
 ##### Overview of common distributions
