@@ -14,6 +14,7 @@ I will revisit it when I have more stucture in the system.
 #### Progression over time
 [[Obsidian Thinking v1]]
 [[Obsidian Thinking v2]]
+[[Obsidian Thinking v3]]
 
 ## INBOX
 

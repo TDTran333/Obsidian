@@ -1,10 +1,10 @@
 ---
 aliases: janitor
-tags: R
+tags: R, package
 ---
-Link: [Website](https://sfirke.github.io/janitor/reference/index.html)
+Link: [Reference](https://sfirke.github.io/janitor/reference/index.html)
 
-# janitor package
+# Janitor Package
 janitor has simple functions for examining and cleaning dirty data. 
 
 ## Functions

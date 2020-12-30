@@ -1,7 +1,10 @@
 ---
-tags: R
+aliases: broom
+tags: R, package
 ---
 Link: [Vignette](https://cran.r-project.org/web/packages/broom/vignettes/broom.html)
+
+# Broom Package
 
 ### Summary
 broom summarizes key information about models in tidy tibble()s. broom provides three verbs to make it convenient to interact with model objects:

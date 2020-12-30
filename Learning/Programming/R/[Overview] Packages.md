@@ -3,7 +3,7 @@
 ### [[library(tidyr)]]
 ### [[library(tidytuesdayR)]]
 ### [[library(broom)]]
-
+### [[library(lubridate)]]
 
  [[library(rvest) + SelectorGadget Vignettes|library(rvest)]]
 

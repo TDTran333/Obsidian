@@ -1,10 +1,10 @@
 ---
 aliases: tidyr
-tags: R
+tags: R, package
 ---
-Link: [Website](https://tidyr.tidyverse.org/reference/index.html)
+Link: [Reference](https://tidyr.tidyverse.org/reference/index.html)
 
-# tidyr package
+# Tidyr Package
 The goal of tidyr is to help you create tidy data. Tidy data is data where:
 
 * Every column is variable.

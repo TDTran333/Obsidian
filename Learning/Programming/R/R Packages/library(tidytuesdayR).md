@@ -1,10 +1,10 @@
 ---
 aliases: tidytuesdayR
-tags: R
+tags: R, package
 ---
-Link: [Website](https://thebioengineer.github.io/tidytuesdayR/reference/index.html)
+Link: [Reference](https://thebioengineer.github.io/tidytuesdayR/reference/index.html)
 
-# tidytuesdayR package
+# TidytuesdayR Package
 tidytuesdayR has the main goal to make it easy to participate in the weekly #TidyTuesday project. 
 
 ## Functions
