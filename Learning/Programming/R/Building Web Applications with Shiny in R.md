@@ -183,3 +183,255 @@ Building a Shiny app is a modular process. You start with the UI, then you work 
 Run app at each step to insure everything works as intended.
 
 ## Reactivity 101
+Essentially, the output is notified whenever any of its dependencies change, and it updates in response to that.
+The two fundamental components in reactive programming are reactive sources, and endpoints.
+
+#### Reactive Source
+User input that typically comes through a browser interface.
+Reactive sources are accessible through any input$x.
+A reactive source can be connected to multiple endpoints, and vice versa.
+
+#### Reactive Endpoint
+Output that typically appears in the browser window, such as a plot or a table of values.
+Endpoints are notified when one of the source dependencies change, and it updates in response to this signal.
+
+An example of reactive endpoints is observers. For example, an output object is a reactive observer. Under the hood, a render function returns a reactive expression, and when you assign this reactive expression to an output$value, Shiny automatically creates an observer that uses the reactive expression.
+
+#### Reactive Conductor
+An intermediate that depends on reactive sources, and/or updates reactive endpoints. 
+It is often used to encapsulate repeated computations, that can be expensive.
+
+#### Reactive Expressions
+A reactive expression is an R expression that uses widget input and returns a value. The reactive expression will update this value whenever the original widget changes.
+Reactive endpoints are accessible through any output$y.
+Reactive expressions are **lazy** and **cached**.
+1.  Lazy: Evaluated only when it is called, typically by a reactive endpoint.
+2.  Cached: Evaluated only when the value of one of its underlying dependencies changes.
+
+Codes inside reactive needs to be wrapped inside curly braces.
+
+##### reactive()
+Wraps a normal expression to create a reactive expression. Conceptually, a reactive expression is a expression whose result will change over time.
+
+#### Observers vs. Reactors
+Reactive flow is all about connecting the different reactive components together.
+![[Shiny Reactive Flowchart.png]]
+
+A reactive expression can call other reactive expressions. This allows you to modularize computations and ensure that they are NOT executed repeatedly. Mastering the use of reactive expressions is key to building performant Shiny applications.
+
+Observers can access reactive sources and reactive expressions, but they don't return a value. Instead they are used primarily for their side effects, like displaying a plot, table, or text in the browser. By default an observer triggers an action, whenever one of its underlying dependencies change.
+
+**Role**
+* reactive() is for calculating values, without side effects.
+* observe() is for performing actions, with side effects.
+
+**Differences**
+* Return Values: Reactive expression returns values, but observers don't.
+* Evaluation: Observers eagerly respond to changes in their dependencies, while reactive expressions are lazy.
+* Side effects: Observers are primarily useful for their side effects, whereas, reactive expressions must NOT have side effects.
+
+##### observe()
+Create a reactive observer.
+
+##### showNotification()
+Show or remove a notification.
+
+### Stop - Delay - Trigger
+Shiny's reactive programming framework is designed such that any changes to inputs automatically update the outputs that depend on it. 
+
+* Stop with isolate()
+* Delay with eventReactive()
+* Trigger with observeEvent()
+
+#### Isolating Actions
+If we don't want this behavior, we can use the isolate function. The isolate function allows to read a reactive value without triggering re-execution when its value changes.
+
+##### isolate()
+Create a non-reactive scope for an expression.
+
+#### Delaying Actions
+In some situations, we might want more explicit control over the trigger that causes the update. 
+
+```R
+rval_x <- eventReactive(input$event, {
+ # calculations
+})
+```
+
+##### eventReactive()
+Respond to "event-like" reactive inputs, values, and expressions.
+
+##### actionButton()
+Creates an action button or link whose value is initially zero, and increments by one each time it is pressed.
+
+#### Triggering Actions
+There are times when you want to perform an action in response to an event.
+
+##### observeEvent()
+Respond to "event-like" reactive inputs, values, and expressions.
+
+It accepts two arguments:
+1.  The event you want to respond to.
+2.  The function that should be called whenever the event occurs.
+
+##### modalDialog()
+This creates the UI for a modal dialog, using Bootstrap's modal class. Modals are typically used for showing important messages, or for presenting UI that requires input from the user, such as a username and password input.
+
+```R
+server <- function(input, output, session) {
+  observeEvent(input$show_help, {
+    showModal(modalDialog(bmi_help_text))
+  })
+  rv_bmi <- eventReactive(input$show_bmi, {
+    input$weight/(input$height^2)
+  })
+  output$bmi <- renderText({
+    bmi <- rv_bmi()
+    paste("Hi", input$name, ". Your BMI is", round(bmi, 1))
+  })
+}
+
+ui <- fluidPage(
+  titlePanel('BMI Calculator'),
+  sidebarLayout(
+    sidebarPanel(
+      textInput('name', 'Enter your name'),
+      numericInput('height', 'Enter your height in meters', 1.5, 1, 2),
+      numericInput('weight', 'Enter your weight in Kilograms', 60, 45, 120),
+      actionButton("show_bmi", "Show BMI"),
+      actionButton("show_help", "Help")
+      
+    ),
+    mainPanel(
+      textOutput("bmi")
+    )
+  )
+)
+
+shinyApp(ui = ui, server = server)
+```
+
+## Shiny Apps Practices
+##### dateRangeInput()
+Creates a pair of text inputs which, when clicked on, bring up calendars that the user can click on to select dates.
+
+### App 1: UFO Sightings Dashboard
+```R
+ui <- fluidPage(
+  titlePanel("UFO Sightings"),
+  sidebarLayout(
+    sidebarPanel(
+      selectInput("state", "Choose a U.S. state:", choices = unique(usa_ufo_sightings$state)),
+      dateRangeInput("dates", "Choose a date range:",
+                     start = "1920-01-01",
+                     end = "2000-01-01")
+    ),
+    mainPanel(
+      tabsetPanel(
+        # Add plot output named 'shapes'
+        tabPanel("shapes", plotOutput("shapes")),
+        # Add table output named 'duration_table'
+        tabPanel("duration_table", tableOutput("duration_table"))
+      )
+    )
+  )
+)
+
+server <- function(input, output) {
+  sightings <- reactive({
+    usa_ufo_sightings %>%
+      filter(date_sighted >= input$dates[1],
+             date_sighted <= input$dates[2],
+             state == input$state) 
+  })
+  output$shapes <- renderPlot({
+    df <- sightings()
+    ggplot(df, aes(shape)) +
+      geom_bar()
+  })
+    output$duration_table <- renderTable({
+    df <- sightings() 
+    df %>%
+      group_by(shape) %>%
+      summarize(number = n(),
+                average_min = mean(duration_sec) / 60,
+                median_min = median(duration_sec) / 60,
+                min_duration_min = min(duration_sec) / 60,
+                max_duration_min = max(duration_sec) / 60
+      )
+  })
+}
+
+shinyApp(ui, server)
+```
+
+### App 2: Mental Health in Tech Survey
+```R
+ui <- fluidPage(
+  titlePanel("2014 Mental Health in Tech Survey"),
+  sidebarPanel(
+    sliderTextInput(
+      inputId = "work_interfere",
+      label = "If you have a mental health condition, do you feel that it interferes with your work?", 
+      grid = TRUE,
+      force_edges = TRUE,
+      choices = c("Never", "Rarely", "Sometimes", "Often")
+    ),
+    checkboxGroupInput(
+      inputId = "mental_health_consequence",
+      label = "Do you think that discussing a mental health issue with your employer would have negative consequences?", 
+      choices = c("Maybe", "Yes", "No"),
+      selected = "Maybe"
+    ),
+    pickerInput(
+      inputId = "mental_vs_physical",
+      label = "Do you feel that your employer takes mental health as seriously as physical health?", 
+      choices = c("Don't Know", "No", "Yes"),
+      multiple = TRUE
+    )    
+  ),
+  mainPanel(
+    plotOutput("age")  
+  )
+)
+
+server <- function(input, output, session) {
+  output$age <- renderPlot({
+    validate(
+      need(input$mental_vs_physical != "", "Please select an input for mental versus physical health.")
+    )
+    mental_health_survey %>%
+      filter(
+        work_interfere == input$work_interfere,
+        mental_health_consequence %in% input$mental_health_consequence,
+        mental_vs_physical %in% input$mental_vs_physical
+      ) %>%
+      ggplot(aes(Age)) +
+      geom_histogram()
+  })
+}
+
+shinyApp(ui, server)
+```
+
+#### Custom Error Messages
+##### validate()
+For an output rendering function (e.g. renderPlot()), you may need to check that certain input values are available and valid before you can render the output. validate gives you a convenient mechanism for doing so.
+
+##### need()
+The need function takes two arguments. The test and the custom error message.
+
+#### shinyWidgets
+##### shinyWidgetsGallery()
+Opens a pre-built Shiny app that allows you to explore these pre-built inputs **and** gives you the code for implementing them.
+
+##### checkboxGroupInput()
+Create a group of checkboxes that can be used to toggle multiple choices independently. The server will receive the input as a character vector of the selected values.
+
+##### pickerInput()
+An alternative to selectInput with plenty of options to customize it.
+
+### App 3: Explore Distinctives Ingredients Across Cuisines
+
+##### DT::RenderDT() and DT::DTOuput()
+Helper functions for using DT in Shiny. The former is used to create a container for table, and the latter is used in the server logic to render the table.
