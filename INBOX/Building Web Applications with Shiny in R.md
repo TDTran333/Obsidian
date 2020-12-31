@@ -4,7 +4,7 @@ tags: R, shiny
 ---
 
 # Building Web Applications with Shiny in R
-### Introduction to Shiny
+## Introduction to Shiny
 #### What is a web app?
 * Updates based on user input / interaction
 * Made up of UI & server
@@ -51,12 +51,6 @@ Makes a reactive version of the given function that also uses base::cat() to tur
 #### While building any app, it is critical to begin with the end in mind.
 Sketch how the final app will look and how the user will interact with it.
 
-#### Steps to build the Shiny app
-* Add inputs (UI)
-* Add outputs (UI / server)
-* Update layout (UI)
-* Update output (server)
-
 ##### titlePanel()
 Create a panel containing an application title.
 
@@ -69,13 +63,13 @@ The sidebar is displayed with a distinct background color and typically contains
 ##### mainPanel()
 The main area occupies 2/3 of the horizontal width and typically contains outputs.
 
-##### renderPlot(0)
+##### renderPlot()
 Renders a reactive plot that is suitable for assigning to an output slot.
 
 ##### plotOutput()
 Create an plot or image output element.
 
-### Inputs, Outputs, and Layouts
+## Inputs, Outputs, and Layouts
 #### Inputs functions
 Shiny provides a variety of inputs to choose from.
 * **text** (`textInput`, `selectInput`)
@@ -115,6 +109,77 @@ Output functions are used back in the UI to display the outputs buitl in the ser
 * imageOutput()
 * plotOutput()
 
-#### Non-Shiny output and render functions
-DT, leaflet, plotly
+1.  Create the output (plot, table, text, etc.).
+2.  Render the output object using the appropriate `render___` function.
+3.  Assign the rendered object to `output$x`.
+4.  Add the output to the UI using the appropriate `___Output` function.
 
+#### Non-Shiny output and render functions
+There are multiple `htmlwidgets` packages like `DT`, `leaflet`, `plotly`, etc. that provide highly interactive outputs and can be easily integrated into Shiny apps using almost the same pattern.
+
+#### Layouts and themes
+Layout functions allow inputs and outputs to be visually arranged in the UI. A well-chosen layout makes a Shiny app aesthetically more appealing, and also improves the user experience.
+
+Displaying several tables and plots on the same page can lead to visual clutter and distract users of the app. In such cases, the tab layout comes in handy, as it allows different outputs to be displayed as tabs.
+
+* Sidebar layout
+* Tab layout
+* Theme selector
+* shinythemes::themeSelector()
+* theme = shinythemes::shinytheme("\<your theme>")
+
+#### Adding a theme
+Shiny makes it easy to customize the theme of an app. The UI functions in Shiny make use of [Twitter Bootstrap](https://getbootstrap.com/docs/3.4/), a popular framework for building web applications. [Bootswatch](https://bootswatch.com/) extends Bootstrap by making it really easy to skin an application with minimal code changes.
+
+##### tabsetPanel()
+Create a tabset that contains tabPanel() elements. Tabsets are useful for dividing output into multiple independently viewable sections.
+
+##### tabPanel()
+Create a tab panel.
+
+```R
+ui <- fluidPage(
+  titlePanel("Popular Baby Names"),
+  # shinythemes::themeSelector(),
+  theme = shinythemes::shinytheme("superhero"),
+  sidebarLayout(
+    sidebarPanel(
+      selectInput('name', 'Select Name', top_trendy_names$name)
+    ),
+    mainPanel(
+      tabsetPanel(
+        tabPanel("Plot", plotly::plotlyOutput('plot_trendy_names')),
+        tabPanel("Table", DT::DTOutput('table_trendy_names'))
+      )
+    )
+  )
+)
+server <- function(input, output, session){
+  plot_trends <- function(){
+    babynames %>% 
+      filter(name == input$name) %>% 
+      ggplot(aes(x = year, y = n)) +
+      geom_col()
+  }
+  output$plot_trendy_names <- plotly::renderPlotly({
+    plot_trends()
+  })
+    output$table_trendy_names <- DT::renderDT({
+    babynames %>% 
+      filter(name == input$name)
+  })
+}
+shinyApp(ui = ui, server = server)
+```
+
+#### Building Shiny apps: 4 steps
+Building a Shiny app is a modular process. You start with the UI, then you work on the server code, building outputs based on the user inputs. The more you practice this approach deliberately, the easier it will become to build good apps.
+
+1. Add inputs (UI)
+2. Add outputs (UI / server)
+3. Update layout (UI)
+4. Update output (server)
+
+Run app at each step to insure everything works as intended.
+
+## Reactivity 101
