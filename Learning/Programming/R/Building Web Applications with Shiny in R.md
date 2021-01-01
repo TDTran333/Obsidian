@@ -252,12 +252,6 @@ Create a non-reactive scope for an expression.
 #### Delaying Actions
 In some situations, we might want more explicit control over the trigger that causes the update. 
 
-```R
-rval_x <- eventReactive(input$event, {
- # calculations
-})
-```
-
 ##### eventReactive()
 Respond to "event-like" reactive inputs, values, and expressions.
 
@@ -273,6 +267,9 @@ Respond to "event-like" reactive inputs, values, and expressions.
 It accepts two arguments:
 1.  The event you want to respond to.
 2.  The function that should be called whenever the event occurs.
+
+##### showModal()
+This causes a modal dialog to be displayed in the client browser, and is typically used with modalDialog().
 
 ##### modalDialog()
 This creates the UI for a modal dialog, using Bootstrap's modal class. Modals are typically used for showing important messages, or for presenting UI that requires input from the user, such as a username and password input.
@@ -290,7 +287,6 @@ server <- function(input, output, session) {
     paste("Hi", input$name, ". Your BMI is", round(bmi, 1))
   })
 }
-
 ui <- fluidPage(
   titlePanel('BMI Calculator'),
   sidebarLayout(
@@ -307,7 +303,6 @@ ui <- fluidPage(
     )
   )
 )
-
 shinyApp(ui = ui, server = server)
 ```
 
@@ -336,7 +331,6 @@ ui <- fluidPage(
     )
   )
 )
-
 server <- function(input, output) {
   sightings <- reactive({
     usa_ufo_sightings %>%
@@ -361,7 +355,6 @@ server <- function(input, output) {
       )
   })
 }
-
 shinyApp(ui, server)
 ```
 
@@ -394,7 +387,6 @@ ui <- fluidPage(
     plotOutput("age")  
   )
 )
-
 server <- function(input, output, session) {
   output$age <- renderPlot({
     validate(
@@ -410,7 +402,6 @@ server <- function(input, output, session) {
       geom_histogram()
   })
 }
-
 shinyApp(ui, server)
 ```
 
@@ -432,6 +423,116 @@ Create a group of checkboxes that can be used to toggle multiple choices indepen
 An alternative to selectInput with plenty of options to customize it.
 
 ### App 3: Explore Distinctives Ingredients Across Cuisines
-
+```R
+ui <- fluidPage(
+  titlePanel('Explore Cuisines'),
+  sidebarLayout(
+    sidebarPanel(
+      selectInput('cuisine', 'Select Cuisine', unique(recipes$cuisine)),
+      sliderInput('nb_ingredients', 'Select No. of Ingredients', 5, 100, 20),
+    ),
+    mainPanel(
+      tabsetPanel(
+        tabPanel('Word Cloud', d3wordcloud::d3wordcloudOutput('wc_ingredients', height = '400')),
+        tabPanel('Plot', plotly::plotlyOutput('plot_top_ingredients')),
+        tabPanel('Table', DT::DTOutput('dt_top_ingredients'))
+      )
+    )
+  )
+)
+server <- function(input, output, session){
+  output$wc_ingredients <- d3wordcloud::renderD3wordcloud({
+    ingredients_df <- rval_top_ingredients()
+    d3wordcloud(ingredients_df$ingredient, ingredients_df$nb_recipes, tooltip = TRUE)
+  })
+  rval_top_ingredients <- reactive({
+    recipes_enriched %>% 
+      filter(cuisine == input$cuisine) %>% 
+      arrange(desc(tf_idf)) %>% 
+      head(input$nb_ingredients) %>% 
+      mutate(ingredient = forcats::fct_reorder(ingredient, tf_idf))
+  })
+  output$plot_top_ingredients <- plotly::renderPlotly({
+    rval_top_ingredients() %>%
+      ggplot(aes(x = ingredient, y = tf_idf)) +
+      geom_col() +
+      coord_flip()
+  })
+  output$dt_top_ingredients <- DT::renderDT({
+    recipes %>% 
+      filter(cuisine == input$cuisine) %>% 
+      count(ingredient, name = 'nb_recipes') %>% 
+      arrange(desc(nb_recipes)) %>% 
+      head(input$nb_ingredients)
+  })
+}
+shinyApp(ui = ui, server= server)
+```
 ##### DT::RenderDT() and DT::DTOuput()
 Helper functions for using DT in Shiny. The former is used to create a container for table, and the latter is used in the server logic to render the table.
+
+##### plotly::renderPlotly() and plotly::plotlyOutput()
+Output and render functions for using plotly within Shiny applications and interactive Rmd documents.
+
+##### d3wordcloud::renderD3wordcloud() and d3wordcloud::d3wordcloudOutput()
+Widget render and output function for use in Shiny.
+
+[http://gallery.htmlwidgets.org/](http://gallery.htmlwidgets.org/).
+
+### App 4: Mass Shootings Analysis
+```R
+ui <- bootstrapPage(
+  theme = shinythemes::shinytheme('simplex'),
+  leaflet::leafletOutput('map', width = '100%', height = '100%'),
+  absolutePanel(top = 10, right = 10, id = 'controls',
+                sliderInput('nb_fatalities', 'Minimum Fatalities', 1, 40, 10),
+                dateRangeInput(
+                  'date_range', 'Select Date', "2010-01-01", "2019-12-01"
+                ),
+                actionButton('show_about', 'About')
+  ),
+  tags$style(type = "text/css", "
+    html, body {width:100%;height:100%}     
+    #controls{background-color:white;padding:20px;}
+  ")
+)
+server <- function(input, output, session) {
+  observeEvent(input$show_about, {
+    showModal(modalDialog(text_about, title = 'About'))
+  })
+  output$map <- leaflet::renderLeaflet({
+    mass_shootings %>% 
+      filter(
+        date >= input$date_range[1],
+        date <= input$date_range[2],
+        fatalities >= input$nb_fatalities
+      ) %>% 
+      leaflet() %>% 
+      setView( -98.58, 39.82, zoom = 5) %>% 
+      addTiles() %>% 
+      addCircleMarkers(
+        popup = ~ summary, radius = ~ sqrt(fatalities)*3,
+        fillColor = 'red', color = 'red', weight = 1
+      )
+  })
+}
+shinyApp(ui, server)
+```
+
+##### bootstrapPage()
+Create a Shiny UI page that loads the CSS and JavaScript for Bootstrap, and has no content in the page body (other than what you provide).
+
+##### absolutePanel()
+Creates a panel whose contents are absolutely positioned.
+
+##### leaflet::renderLeaflet() and leaflet::leafletOutput()
+Use leafletOutput() to create a UI element, and renderLeaflet() to render the map widget.
+
+##### leaflet()
+This function creates a Leaflet map widget using htmlwidgets. The widget can be rendered on HTML pages generated from R Markdown, Shiny, or other applications.
+
+##### tags$style()
+Apply CSS with HTML.
+
+##### addCircleMarkers()
+Add graphics elements and layers to the map widget.

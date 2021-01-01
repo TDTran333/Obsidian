@@ -64,3 +64,6 @@ glm is used to fit generalized linear models, specified by giving a symbolic des
 
 ##### findInterval()
 Given a vector of non-decreasing breakpoints in vec, find the interval containing each element of x.
+
+##### seq_along()
+`seq_along()` generates a sequence the same length of the argument passed, and in the context of a for loop is used to more easily generate the index to iterate over
