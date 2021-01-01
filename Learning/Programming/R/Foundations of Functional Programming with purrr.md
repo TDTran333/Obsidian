@@ -54,7 +54,7 @@ map() makes simulating multiple datasets simple.
 We can also use map() to run the same model with different inputs, where each different input is one element from a list.
 
 ##### map_df(), map_dfc(), map_dfr()
-Returns a data frame.
+Returns a data frame. map_dfr() and map_dfc() return a data frame created by row-binding and column-binding respectively. They require dplyr to be installed.
 
 ### map2() and pmap()
 The `map()` function is great if you need to iterate over _one_ list, however, you will often need to iterate over two lists at the same time. This is where `map2()` comes in. While `map()` takes the list as the `.x` argument; `map2()` takes two lists as two arguments: `.x` and `.y`.
@@ -67,11 +67,8 @@ Map over multiple inputs simultaneously. map2() and walk2() are specialised for 
 ##### pmap()
 Note that a data frame is a very important special case, in which case pmap() and pwalk() apply the function .f to each row. 
 
-##### walk()
-The walk functions work similarly to the map functions, but you use them when you’re interested in applying a function that performs an action instead of producing data (e.g., `print()`).
-
 ## Troubleshooting lists with purrr
-If you `map()` over a list, and one of the elements does not have the right data type, you will not get the output you expect. If you have a very large list, figuring out where things went wrong, and what exactly went wrong can be hard. That is where `safely()` comes in; it shows you both your results and where the errors occurred in your `map()` call.
+If you `map()` over a list, and one of the elements does not have the right data type, you will not get the output you expect. If you have a very large list, figuring out where things went wrong, and what exactly went wrong can be hard. That is where `safely()` comes in; it shows you both your results and where the errors occurred in your `map()` call. Piping into `transpose()` creates two lists, one of `result` and of `error`.
 
 ##### safely()
 Wrapped function instead returns a list with components result and error. If an error occurred, error is an error object and result has a default value (otherwise). Else error is NULL.
@@ -79,4 +76,34 @@ Wrapped function instead returns a list with components result and error. If an 
 ##### transpose()
 Transpose turns a list-of-lists "inside-out"; it turns a pair of lists into a list of pairs, or a list of pairs into pair of lists
 
+Once you have figured out how to solve an issue with `safely()`, (e.g., output an `NA` in place of an error), swap out `safely()` with `possibly()`. `possibly()` will run through your code and implement your desired changes without printing out the error messages.
+
+##### possibly()
+Wrapped function uses a default value (otherwise) whenever an error occurs.
+
+Printing out lists with `map()` shows a lot of bracketed text in the console, which can be useful for understanding their structure, but this information is usually _not_ important for communicating with your end users. If you need to print, using `walk()` prints out lists in a more compact and human-readable way, without all those brackets. `walk()` is also great for printing out plots without printing anything to the console.
+
+##### walk()
+The walk functions work similarly to the map functions, but you use them when you’re interested in applying a function that performs an action instead of producing data (e.g., `print()`).
+
 ## Problem solving with purrr
+### Using purrr in your workflow
+#### Setting Names
+When working with a list, often the fist step is to check if a list has names with the names() function. If there is no names, we can set_names() combined with map_chr().
+
+#### Asking questions from a list
+Piping `map()` into `set_names()` and then `sort()` to answer questions.
+
+### Solving complex problems
+#### Nested lists
+Sometimes the elements of a list are another list which means the variables names we are interested in are buried or nested. To extract data in a list that is inside another list, we will use nested `map() `functions. 
+`map(list_of_lists, ~map(.x, ~.x\[\["element"]]))`
+
+#### Summary stats
+Pulling data from lists into dataframes to generate summary statistics. Outside of purrr, we would need to create an empty dataframe, extract the names, and then use a for loop and put that output into `summary()`. With purrr, we would use the `data_frame()` or `tibble()` function inside `map_df()`.
+
+### Graphs in purrr
+Go from a list to a graph. Each `ggplot()` graph requires a dataframe as input, so we cannot input a list. We can use `map_df()` to transform the data from a list, into the dataframe we need and pipe directly into the `ggplot()` code.
+
+`` `[` `` can be used to subset a list of a lists inside the map_\*() function.
+See [[R Accessors]].
