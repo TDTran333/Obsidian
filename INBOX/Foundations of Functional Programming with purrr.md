@@ -57,7 +57,9 @@ We can also use map() to run the same model with different inputs, where each di
 Returns a data frame.
 
 ### map2() and pmap()
-If we have two list, we use map2(). If we have 3 or more list, we use pmap(). For pmap(), we need to create a list of all the lists we want to use, as our input. The second argument of pmap() is a custom function with the names of the elements from the input list as arguments instead of having to use .x and .y.
+The `map()` function is great if you need to iterate over _one_ list, however, you will often need to iterate over two lists at the same time. This is where `map2()` comes in. While `map()` takes the list as the `.x` argument; `map2()` takes two lists as two arguments: `.x` and `.y`.
+
+If we have 3 or more list, we use pmap(). To use `pmap()`, you first need to create a _master list_ of all the lists we want to iterate over. The master list is the input for `pmap()`. Instead of using `.x` or `.y`, use the list names _as_ the argument names.
 
 ##### map2()
 Map over multiple inputs simultaneously. map2() and walk2() are specialised for the two argument case
@@ -69,5 +71,12 @@ Note that a data frame is a very important special case, in which case pmap() an
 The walk functions work similarly to the map functions, but you use them when you’re interested in applying a function that performs an action instead of producing data (e.g., `print()`).
 
 ## Troubleshooting lists with purrr
+If you `map()` over a list, and one of the elements does not have the right data type, you will not get the output you expect. If you have a very large list, figuring out where things went wrong, and what exactly went wrong can be hard. That is where `safely()` comes in; it shows you both your results and where the errors occurred in your `map()` call.
+
+##### safely()
+Wrapped function instead returns a list with components result and error. If an error occurred, error is an error object and result has a default value (otherwise). Else error is NULL.
+
+##### transpose()
+Transpose turns a list-of-lists "inside-out"; it turns a pair of lists into a list of pairs, or a list of pairs into pair of lists
 
 ## Problem solving with purrr
