@@ -67,3 +67,6 @@ Given a vector of non-decreasing breakpoints in vec, find the interval containin
 
 ##### seq_along()
 `seq_along()` generates a sequence the same length of the argument passed, and in the context of a for loop is used to more easily generate the index to iterate over
+
+##### data()
+Loads specified data sets, or list the available data sets.
