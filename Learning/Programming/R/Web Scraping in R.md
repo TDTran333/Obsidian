@@ -1,5 +1,5 @@
 ---
-aliases: Web Scrapping
+aliases: Web Scrapping, rvest
 tags: R
 ---
 related: [[library(rvest) + SelectorGadget Vignettes|library(rvest) example]]

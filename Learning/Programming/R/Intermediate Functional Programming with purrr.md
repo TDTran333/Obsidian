@@ -229,8 +229,185 @@ Compose multiple functions. Create a new function from two or more functions.
 
 When you use `compose()`, the functions are passed from **right to left** — that is to say in the same order as the one you would use in a nested call in base R: the first function to be executed is the function on the right.
 
-##### tidy()
-Turn an object into a tidy tibble.
+#### Building functions with compose() and negate()
+There is no limits to how many function there is in `compose()`.
+We can use `negate()` on mapper so that we can reduce the number of code we need to adjust if we want to change something.
 
+##### negate()
+Negate a predicate function.
+
+#### HTTP Status Codes
+| Code | Description        | Code | Description           |
+| ---- | ------------------ | ---- | --------------------- |
+| 200  | OK                 | 400  | Bad Request           |
+| 201  | Created            | 401  | Unauthorized          |
+| 202  | Accepted           | 403  | Forbidden             |
+| 301  | Moved permanently  | 404  | Not Found             |
+| 303  | See Other          | 410  | Gone                  |
+| 304  | Not Modified       | 500  | Internal Server Error |
+| 307  | Temporary Redirect | 503  | Server Unavailable    |
+
+##### %in% operator
+%in% is a more intuitive interface as a binary operator, which returns a logical vector indicating if there is a match or not for its left operand.
+
+```R
+`%not_in%` <- negate(`%in%`)
+extract_status <- compose(status_code, GET)
+strict_code <- function(url) {
+  code <- extract_status(url)
+  if (code %not_in% 200:203) {
+    return(NA)
+  }
+  code
+}
+```
+
+#### Prefilling functions
 ##### partial()
 Partial apply a function, filling in some arguments.
+
+#### Using partial() and compose()
+Reminder on [[Web Scraping in R|rvest]] package.
+
+```R
+get_h2 <- partial(html_nodes, css = "h2")
+get_content <- compose(html_text, get_h2, read_html)
+res <- map(urls, get_content) %>% set_names(urls)
+res
+
+get_a <- partial(html_nodes, css = "a")
+href <- partial(html_attr, name = "href")
+get_links <- compose(href, get_a, read_html)
+res <- map(urls, get_links) %>% set_names(urls)
+res
+```
+
+### List columns
+#### What is a list column?
+A list column, also known as a nested dataframe, can have anything in one cell of a dataframe, instead of a scalar value. This behavior is specific to the tibble class, which is the tidyverse implementation of dataframes.
+
+#### Why list columns?
+You can write cleaner code with list-columns as everything stays in the same dataframe and we can combine the power of dplyr and the flexibility purrr.
+
+This is useful is for example, we have a function that returns a non-predictable number of results. Or if we do modeling and the output contains all the related stats.
+
+#### Unnesting nested data.frame
+The idea when using a nested dataframe (i.e., dataframe with a list column) is to keep everything inside a dataframe so that the workflow stays tidy and get back to a standard dataframe stucture once you've performed your operations.
+
+##### nest() and unnest()
+Nesting creates a list-column of data frames; unnesting flattens it back out into regular columns. Nesting is implicitly a summarising operation: you get one row for each group defined by the non-nested columns. This is useful in conjunction with other summaries that work with whole datasets, most notably models.
+
+```R
+summary_lm <- compose(summary, lm)
+iris %>%
+  group_by(Species) %>%
+  nest() %>%
+  mutate(data = map(data, ~ summary_lm(Sepal.Length ~ Sepal.Width, data = .x)),
+			  data = map(data, "r.squared")) %>%
+  unnest()
+```
+
+## Case Study - Analysing Tweets
+##### vec_depth()
+The depth of a vector is basically how many levels that you can index into it.
+
+Nested lists might seem strange to you if you have always worked with dataframes. But actually, it's a pretty standard data format when you are retrieving data from the web: most APIs return JSON (short for JavaScript Object Notation), which is read as a nested list by R. Why this format? Because not everything can be put into rows, columns, and cells. JSON is a format that allows having a variety of elements at several levels of depth. It's also lighter, and quicker to run on the web.
+
+#### Discovering the dataset
+```R
+rt <- keep(rstudioconf, "is_retweet") %>%
+  map("user_id") %>% 
+  unique()
+
+non_rt <- discard(rstudioconf, "is_retweet") %>%
+  map("user_id") %>% 
+  unique()
+
+union(rt, non_rt) %>% length()
+setdiff(rt, non_rt) %>% length()
+```
+
+##### union(), intersect(), setdiff(), setequal()
+Performs set union, intersection, (asymmetric!) difference, equality and membership on two vectors.
+
+#### Extracting information from the dataset
+```R
+mean_na_rm <- partial(mean, na.rm = TRUE)
+round_one <- partial(round, digits = 1)
+rounded_mean <- compose(round_one, mean_na_rm)
+
+non_rt <- discard(rstudioconf, "is_retweet")
+non_rt %>%
+  map_dbl("favorite_count") %>%
+  rounded_mean()
+```
+```R
+flatten_to_vector <- compose(as_vector, compact, flatten)
+extractor <- function(list, what = "mentions_screen_name"){
+  map( list , what ) %>%
+    flatten_to_vector()
+}
+
+six_most <- compose(tail, sort, table)
+extractor(rstudioconf) %>% 
+  six_most()
+```
+
+##### flatten()
+These functions remove a level hierarchy from a list. They are similar to unlist(), but they only ever remove a single layer of hierarchy and they are type-stable, so you always know what the type of the output is.
+
+#### Manipulating URLs
+```R
+urls_clean <- map(rstudioconf, "urls_url") %>%
+  flatten()
+compact_urls <- compact(urls_clean)
+
+has_github <- as_mapper(~ str_detect(.x, "github"))
+map_lgl( compact_urls, has_github ) %>%
+  sum()
+```
+```R
+str_prop_detected <- function(string, pattern) {
+  string %>%
+    str_detect(pattern) %>%
+    mean()
+} 
+
+flatten_and_compact <- compose(compact, flatten)
+rstudioconf %>%
+  map("urls_url") %>%
+  flatten_and_compact() %>% 
+  str_prop_detected("github")
+```
+
+#### Identifying influencers
+```R
+mean_above <- as_mapper(~ .x > 3.3)
+above <- partial(map_at, .at = "retweet_count", .f := mean_above )
+below <- partial(map_at, .at = "retweet_count", .f := negate(mean_above) )
+ab <- map(non_rt, above) %>% keep("retweet_count")
+bl <- map(non_rt, below) %>% keep("retweet_count")
+length(ab)
+length(bl)
+```
+```R
+max_rt <- map_dbl(non_rt, "retweet_count") %>% 
+  max()
+max_rt_calc <- partial(map_at, .at = "retweet_count", .f := ~ .x == max_rt )
+
+res <- non_rt %>%
+  map(max_rt_calc) %>% 
+  keep("retweet_count") %>% 
+  flatten()
+
+res$screen_name
+res$text
+```
+##### map_at()
+map_at() takes a vector of names or positions .at to specify which elements of .x are transformed with .f.
+
+We get the same list back, but with targeted modifications. You can either use the name of the element or a number, to refer to the position of the element.
+
+##### quasi-quotation equals operator, [`:=`](https://www.rdocumentation.org/packages/rlang/topics/quasiquotation), (sometimes known as the "walrus operator").
+`:=` works like `=`, but lets `partial()` know that the argument should be passed to `map_at()` rather than being kept for itself.
+
