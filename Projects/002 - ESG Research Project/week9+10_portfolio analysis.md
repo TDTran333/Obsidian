@@ -1,4 +1,4 @@
-## Analysis for week 9
+## Analysis for week 9 and week 10
 We would like to see the impact of choosing stocks based on ESG indicators combined with the False Rate Discovery methodology.
 To that effect, we will build portfolios and backtest them.
 

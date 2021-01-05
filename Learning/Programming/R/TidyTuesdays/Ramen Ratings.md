@@ -2,9 +2,10 @@
 aliases: TidyTuesday - Ramen Ratings
 tags: wip, R
 ---
-Links: [Youtube](https://www.youtube.com/watch?v=tCa2di7aEP4), [Annotations](https://github.com/dgrtwo/data-screencasts/tree/master/screencast-annotations#ramen-reviews), [Ramen Rater](https://www.theramenrater.com/resources-2/the-list/)
+Links: [Youtube](https://www.youtube.com/watch?v=tCa2di7aEP4), [Annotations](https://github.com/dgrtwo/data-screencasts/tree/master/screencast-annotations#ramen-reviews), [Data](https://github.com/rfordatascience/tidytuesday/blob/master/README.md), [Ramen Rater](https://www.theramenrater.com/resources-2/the-list/)
 
 # TidyTuesday - Ramen Ratings
+## Topic: Web scraping using `rvest` package
 ### Data
 | variable      | class | description                                       |
 |:------------- |:----- |:------------------------------------------------- |
@@ -14,6 +15,44 @@ Links: [Youtube](https://www.youtube.com/watch?v=tCa2di7aEP4), [Annotations](htt
 | style         | chr   | Style of container (cup, pack, tray,              |
 | country       | chr   | Origin country of the ramen brand                 |
 | stars         | dbl   | 0-5 rating of the ramen, 5 is best, 0 is worst    |
+
+### Annotations
+| Time  | Description                                                                                                                                    |
+| ----- |:---------------------------------------------------------------------------------------------------------------------------------------------- |
+| 1:45  | Looking at the website the data came from                                                                                                      |
+| 2:55  | Using gather function (now pivot_longer) to convert wide data to long (tidy) format                                                            |
+| 4:15  | Graphing counts of all categorical variables at once, then exploring them                                                                      |
+| 5:35  | Using fct_lump function to lump three categorical variables to the top N categories and "Other"                                                |
+| 7:45  | Using reorder_within function to re-order factors that have the same name across multiple facets                                               |
+| 9:10  | Using lm function (linear model) to predict star rating                                                                                        |
+| 9:50  | Visualising effects (and 95% CI) of indendent variables in linear model with a coefficient plot (TIE fighter plot)                             |
+| 11:30 | Using fct_relevel function to get "Other" as the base reference level for categorical independent variables in a linear model                  |
+| 13:05 | Using extract function and regex to split a camelCase variable into two separate variables                                                     |
+| 14:45 | Using facet_wrap function to split coefficient / TIE fighter plot into three separate plots, based on type of coefficient                      |
+| 15:40 | Using geom_vline function to add reference line to graph                                                                                       |
+| 17:20 | Using unnest_tokens function from tidytext package to explore the relationship between variety (a sparse categorical variable) and star rating |
+| 18:55 | Explanation of how he would approach variety variable with Lasso regression                                                                    |
+| 19:35 | Web scraping the using rvest package and SelectorGadget (Chrome Extension CSS selector)                                                        |
+| 21:20 | Actually writing code for web scraping, using read_html, html_node, and html_table functions                                                   |
+| 22:25 | Using clean_names function from janitor package to clean up names of variables                                                                 |
+| 23:05 | Explanation of web scraping task: get full review text using the links from the review summary table scraped above                             |
+| 25:40 | Using parse_number function as alternative to as.integer function to cleverly drop extra weird text in review number                           |
+| 26:45 | Using SelectorGadget (Chrome Extension CSS selector) to identify part of page that contains review text                                        |
+| 27:35 | Using html_nodes, html_text, and str_subset functions to write custom function to scrape review text identified in step above                  |
+| 29:15 | Adding message function to custom scraping function to display URLs as they are being scraped                                                  |
+| 30:15 | Using unnest_tokens and anti_join functions to split review text into individual words and remove stop words (e.g., "the", "or", "and")        |
+| 31:05 | Catching a mistake in the custom function causing it to read the same URL every time                                                           |
+| 31:55 | Using str_detect function to filter out review paragraphs without a keyword in it                                                              |
+| 32:40 | Using str_remove function and regex to get rid of string that follows a specific pattern                                                       |
+| 34:10 | Explanation of possibly and safely functions in purrr package                                                                                  |
+| 37:45 | Reviewing output of the URL that failed to scrape, including using character(0) as a default null value                                        |
+| 48:00 | Using pairwise_cor function from widyr package to see which words tend to appear in reviews together                                           |
+| 51:05 | Using igraph and ggraph packages to make network plot of word correlations                                                                     |
+| 51:55 | Using geom_node_text function to add labels to network plot                                                                                    |
+| 52:35 | Including all words (not just those connected to others) as vertices in the network plot                                                       |
+| 54:40 | Tweaking and refining network plot aesthetics (vertex size and colour)                                                                         |
+| 56:00 | Weird hack for getting a dark outline on hard-to-see vertex points                                                                             |
+| 59:15 | Summary of screencast                                                                                                                          |
 
 ### Libraries and functions
 ##### pivot_longer()

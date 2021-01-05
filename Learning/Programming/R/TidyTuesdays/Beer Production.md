@@ -5,16 +5,9 @@ tags: R
 Link: [YouTube](https://www.youtube.com/watch?v=BUFNZv72ow4)
 
 # TidyTuesday - Beer Production
-### Tasks
-##### How to set picture size in R chunk?
-```R
-{r, fig.width = x, fig.height = y}
-```
+### Data
 
-##### How to disable scientific notion in R?
-```R
-options(scipen = 999)
-```
+
 
 ### Libraries and functions
 ##### library(geofacet)
@@ -38,3 +31,14 @@ This is a general purpose complement to the specialised manipulation functions f
 
 ##### ggsave()
 ggsave() is a convenient function for saving a plot. It defaults to saving the last plot that you displayed, using the size of the current graphics device. It also guesses the type of graphics device from the extension.
+
+### Tasks
+##### How to set picture size in R chunk?
+```R
+{r, fig.width = x, fig.height = y}
+```
+
+##### How to disable scientific notion in R?
+```R
+options(scipen = 999)
+```

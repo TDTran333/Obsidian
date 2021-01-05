@@ -2,18 +2,34 @@
 aliases: TidyTuesday - Global Crop Yields
 tags: R
 ---
-Links: [YouTube](https://www.youtube.com/watch?v=0uqAhIiK9Rc), [Annotations](https://github.com/dgrtwo/data-screencasts/tree/master/screencast-annotations#global-crop-yields)
+Links: [YouTube](https://www.youtube.com/watch?v=0uqAhIiK9Rc), [Annotations](https://github.com/dgrtwo/data-screencasts/tree/master/screencast-annotations#global-crop-yields), [Data](https://github.com/rfordatascience/tidytuesday/blob/master/data/2020/2020-09-01/readme.md)
 
 # TidyTuesday - Global Crop Yields
-
+## Topic: Interactive Shiny dashboard
 ### Data 
 Five datasets related to agricultural yields across crop types and by country
-
 * key_crop_yields
 * fertilizer
 * tractors
 * land_use
 * arable_land 
+
+###  Annotations
+| Time  | Description                                                                                                                                      |
+| ----- |:------------------------------------------------------------------------------------------------------------------------------------------------ |
+| 03:35 | Using rename to shorten column name                                                                                                              |
+| 06:40 | Using rename_all with str_remove and regex to remove characters in column name                                                                   |
+| 07:40 | Using pivot_longer to change data from wide to long                                                                                              |
+| 08:25 | Create a faceted geom_line chart                                                                                                                 |
+| 09:40 | Using fct_reorder to reorder facet panels in ascending order                                                                                     |
+| 11:50 | Create an interactive Shiny dashboard                                                                                                            |
+| 33:20 | Create a faceted geom_line chart with add_count and filter(n = max(x)) to subset the data for crops that have observations in every year         |
+| 36:50 | Create a faceted geom_point chart showing the crop yields at start and end over a 50 year period (1968 start date and 2018 end date)             |
+| 45:00 | Create a geom_boxplot to visualize the distribution of yield ratios for the different crops to see how efficiency has increased across countries |
+| 46:00 | Create a geom_col chart to visualize the median yield ratio for each crop                                                                        |
+| 47:50 | Create a geom_point chart to visualize efficiency imporvement for each country for a specific crop (yield start / yield ratio)                   |
+| 50:25 | Using the countrycode package to color geom_point chart by continent names                                                                       |
+| 56:50 | Summary of screencast                                                                                                                            |
 
 ### Libraries and functions
 ##### rename()
