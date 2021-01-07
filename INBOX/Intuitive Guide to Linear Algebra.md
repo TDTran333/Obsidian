@@ -1,7 +1,7 @@
 ---
 tags: math
 ---
-Link: [Website](https://betterexplained.com/articles/linear-algebra-guide/)
+Link: [Website](https://betterexplained.com/articles/linear-algebra-guide/), [YouTube](https://www.youtube.com/watch?v=PFDu9oVAE-g), [Khan Academy](https://www.khanacademy.org/math/linear-algebra/alternate-bases/eigen-everything/v/linear-algebra-introduction-to-eigenvalues-and-eigenvectors)
 
 # Intuitive Guide to Linear Algebra
 

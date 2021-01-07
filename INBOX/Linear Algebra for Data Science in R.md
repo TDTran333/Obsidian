@@ -160,4 +160,21 @@ For a given matrix A:
 PCA
 * The eigenvalues of this matrix are real, and their corresponding eigenvectors point in distinct directions.
 * The total variance of the data set is the sum of the eigenvalues of A transpose times A divided by the number of degrees of freedom. 
-* These eigenvectors are called the principal components of the data set in the matrix A. The direction in which one of the v's points can explain its eigenvalue's worth of the total variance in the dataset. If this eigenvalue is large in relation to the total variance, dimension reduction can be done.
+* The eigenvectors $v_1, v_2, ..., v_n$ are called the principal components of the data set in the matrix A. 
+* The direction in which one of the $v_j$'s points can explain $\lambda_j$ of the total variance in the dataset. If this eigenvalue is large in relation to the total variance, dimension reduction can be done.
+
+### Performing PCA in R
+##### scale()
+scale is generic function whose default method centers and/or scales the columns of a numeric matrix.
+
+##### prcomp()
+Performs a principal components analysis on the given data matrix and returns the results as an object of class prcomp.
+
+##### summary(prcomp())
+Summary and proportion of variance
+
+### Things to do after PCA
+* Data wrangling / quality control
+* Data visualization
+* Unsupervised learning (clustering)
+* Supervised learning (prediction or explanation)
