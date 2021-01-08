@@ -31,7 +31,7 @@ Five datasets related to agricultural yields across crop types and by country
 | 50:25 | Using the countrycode package to color geom_point chart by continent names                                                                       |
 | 56:50 | Summary of screencast                                                                                                                            |
 
-### Libraries and functions
+### Libraries and Functions
 ##### rename()
 rename() changes the names of individual variables using new_name = old_name syntax.
 

@@ -2,7 +2,7 @@
 aliases: TidyTuesday - Extinct Plants
 tags: R 
 ---
-Links: [YouTube ](https://www.youtube.com/watch?v=f7Rc1bvMgZY), [Annotations](https://github.com/dgrtwo/data-screencasts/tree/master/screencast-annotations#plants-in-danger), [Data](https://github.com/rfordatascience/tidytuesday/blob/master/data/2020/2020-08-18/readme.md)
+Links: [YouTube](https://www.youtube.com/watch?v=f7Rc1bvMgZY), [Annotations](https://github.com/dgrtwo/data-screencasts/tree/master/screencast-annotations#plants-in-danger), [Data](https://github.com/rfordatascience/tidytuesday/blob/master/data/2020/2020-08-18/readme.md)
 
 # Tidy Tuesday : Extinct plants
 ## Topics: Data manipulation, Web scraping using `rvest` package
@@ -29,7 +29,7 @@ In total, 500 plant species are considered extinct as of 2020.
 | 51:00 | Using rvest and SelectorGadget to web scrape image links                                                                                                                 |
 | 57:50 | Summary of screencast                                                                                                                                                    |
 
-### Libraries and functions
+### Libraries and Functions
 ##### fct_lump()
 Lump together factor levels into "other".
 

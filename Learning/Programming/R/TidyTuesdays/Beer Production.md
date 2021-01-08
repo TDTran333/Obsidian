@@ -9,7 +9,7 @@ Link: [YouTube](https://www.youtube.com/watch?v=BUFNZv72ow4)
 
 
 
-### Libraries and functions
+### Libraries and Functions
 ##### library(geofacet)
 
 This R package provides geofaceting functionality for ggplot2. Geofaceting arranges a sequence of plots of data for different geographical entities into a grid that strives to preserve some of the original geographical orientation of the entities.
