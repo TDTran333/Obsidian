@@ -39,7 +39,7 @@ There is data for both Arabica and Robusta beans, across many countries and prof
 | 44:25 | Create a linear model lm for each rating metric then visualize the results using a geom_line chart to show how each kilometer of altitude contributes to the score |
 | 50:35 | Summary of screencast                                                                                                                                              |
 
-### Libraries and Functions
+### Libraries, Functions and Tricks
 
 ##### See % of missing data for each columns
 Can also use gather() %>% View() but gather() is retired.
@@ -50,15 +50,14 @@ df %>%
   View()
 ```
   
-##### Angle and justify x axis text in ggplot
-```R
-theme(axis.text.x = element_text(angle = 90, hjust = 1))
-```
+##### Verify graphically if the sum of the individuals ratings equals the total with geom_point()
 
-#####
+##### library(ggraph) and library(igraph) to show correlations graphically
 
-#####
+##### between()
+This is a shortcut for x >= left & x <= right.
 
-#####
+##### pmin()
+pmax*() and pmin*() take one or more vectors as arguments, recycle them to common length and return a single vector giving the ‘parallel’ maxima (or minima) of the argument vectors.
 
-#####
+
