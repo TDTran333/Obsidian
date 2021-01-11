@@ -13,16 +13,21 @@ Across ESG group types
 * Brown ESG Portfolio according to ESG classification
 * Neutral Portfolio as benchmark
 * G minus Brown
+* No transaction fees
 
 Do it twice for GHG and Envscore
+
+Also verify vs. portfolio based on alpha alone. To see if our methodology adds value vs. the naive methodology.
 
 ## To do
 - [ ] Add a table with summary stats of performance ratios
 - [ ] Maybe add a herfindahl index
 - [ ] Top green, top brown
-	- [ ] 3 portfolios
-		- [ ] Long-short top 10 / bottom 10 equiweighted
-		- [ ] Remaining stock as benchmark
+	- [x] 3 portfolios
+		- [x] Long-short top 10 / bottom 10 equi-weighted
+		- [x] Remaining stock as benchmark
+		- [ ] Rebalanced every quarter / month
+		- [ ] Summary stats of portfolios
 
 ### Notes
 
