@@ -22,5 +22,6 @@
 1. [Interactive web-based data visualization with R, plotly, and shiny](https://plotly-r.com/index.html)
 1. [Financial Engineering Analytics: A Practice Manual Using R](https://bookdown.org/wfoote01/faur/)
 
+[Reproducible Finance with R: Code Flows and Shiny Apps for Portfolio Analysis](http://www.reproduciblefinance.com/)
 
 
