@@ -28,6 +28,9 @@ Also verify vs. portfolio based on alpha alone. To see if our methodology adds v
 		- [x] Remaining stock as benchmark
 		- [ ] Rebalanced every quarter / month
 		- [ ] Summary stats of portfolios
+		- [ ] Add indices stats?
+		- [ ] Annualized returns, stdev and sharpe ratios
+		- [ ] Chart of cumulative Return, Daily Return, Drawdown
 
 ### Notes
 

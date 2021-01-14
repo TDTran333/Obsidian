@@ -20,5 +20,7 @@
 1. [Data Science Live Book](https://livebook.datascienceheroes.com/)
 1. [Text Mining with R](https://www.tidytextmining.com/)
 1. [Interactive web-based data visualization with R, plotly, and shiny](https://plotly-r.com/index.html)
+1. [Financial Engineering Analytics: A Practice Manual Using R](https://bookdown.org/wfoote01/faur/)
+
 
 
