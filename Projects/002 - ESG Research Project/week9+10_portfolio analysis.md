@@ -22,12 +22,12 @@ Also verify vs. portfolio based on alpha alone. To see if our methodology adds v
 ## To do
 - [ ] Add a table with summary stats of performance ratios
 - [ ] Maybe add a herfindahl index
-- [ ] Top green, top brown
+- [x] Top green, top brown
 	- [x] 3 portfolios
 		- [x] Long-short top 10 / bottom 10 equi-weighted
 		- [x] Remaining stock as benchmark
-		- [ ] Rebalanced every quarter / month
-		- [ ] Summary stats of portfolios
+		- [x] Rebalanced every quarter / month
+		- [x] Summary stats of portfolios
 		- [ ] Add indices stats?
 		- [ ] Annualized returns, stdev and sharpe ratios
 		- [ ] Chart of cumulative Return, Daily Return, Drawdown
