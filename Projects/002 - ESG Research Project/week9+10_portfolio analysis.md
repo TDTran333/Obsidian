@@ -20,7 +20,8 @@ Do it twice for GHG and Envscore
 Also verify vs. portfolio based on alpha alone. To see if our methodology adds value vs. the naive methodology.
 
 ## To do
-- [ ] Add a table with summary stats of performance ratios
+- [x] Plot perf ratios, concordant obs and cor
+- [x] Add a table with summary stats of perf ratios, concordant obs and cor
 - [ ] Maybe add a herfindahl index
 - [x] Top green, top brown
 	- [x] 3 portfolios
@@ -28,9 +29,9 @@ Also verify vs. portfolio based on alpha alone. To see if our methodology adds v
 		- [x] Remaining stock as benchmark
 		- [x] Rebalanced every quarter / month
 		- [x] Summary stats of portfolios
-		- [ ] Add indices stats?
-		- [ ] Annualized returns, stdev and sharpe ratios
-		- [ ] Chart of cumulative Return, Daily Return, Drawdown
+		- [x] Add indices stats?
+		- [x] Annualized returns, stdev and sharpe ratios
+		- [x] Chart of cumulative Return, Daily Return, Drawdown
 
 ### Notes
 

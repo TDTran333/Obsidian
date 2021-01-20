@@ -4,7 +4,7 @@ Barras, Laurent, O. Scaillet, and Russ Wermers. “Reassessing False Discoveries
 
 [[FDR Critics]]
 
-> In this Reply, we replicate their results, then further explore the bias issue by (i) using different parameter values, and (ii) updating the sampleperiod.
+> In this Reply, we replicate their results, then further explore the bias issue by (i) using different parameter values, and (ii) updating the sample period.
 
 * Over the original period (1975-2006), we show how reasonable adjustments
 to the parameter choices made by BSW and AP results in a sizeable reduction in the
