@@ -32,3 +32,4 @@ Links: [YouTube](https://www.youtube.com/watch?v=EC0SVkFB2OU), [Annotations](htt
 
 ### Libraries, Functions and Tricks
 
+In SVD, the first dimension is usually the frequency.
