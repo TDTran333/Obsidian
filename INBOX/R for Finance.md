@@ -14,8 +14,6 @@ Specify, build, trade, and analyse quantitative financial trading strategies.
 #### library(ttr)
 A collection of over 50 technical indicators for creating technical trading rules. The pack-age also provides fast implementations of common rolling-window functions, and several volatil-ity calculations.
 
-
-
 [Equity Factor Portfolio Case Study](https://www.youtube.com/watch?v=IAz1M16Mtlg) 
 ### Equity Factor Portfolio
 
