@@ -105,6 +105,9 @@ Split up a string into pieces. Return a list.
 
 ###### argument: simplify = TRUE to return a matrix.
 
+### Replacing matches in strings
+##### str_replace() and str_replace_all()
+Replace matched patterns in a string.
 
 ## Pattern matching with regular expressions
 
