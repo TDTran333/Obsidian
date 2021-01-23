@@ -58,9 +58,6 @@ Concatenate Strings.
 -   If the vectors passed to [`paste()`](https://www.rdocumentation.org/packages/base/topics/paste) aren't the same length, the shorter vectors are recycled up to the length of the longest one.
 -   Only use `collapse` if you want a single string as output. `collapse` specifies the string to place between different elements.
 
-#### library(rebus)
-Build regular expressions in a human readable way.
-
 ## Introduction to stringr
 #### library(stringr)
 * Powerful but easy to learn
@@ -110,5 +107,79 @@ Split up a string into pieces. Return a list.
 Replace matched patterns in a string.
 
 ## Pattern matching with regular expressions
+### Regular expressions
+*  A language for describing patterns
+
+#### library(rebus)
+Build regular expressions in a human readable way.
+
+`rebus` provides `START` and `END` shortcuts to specify regular expressions that match the start and end of the string. These are also known as _anchors_.
+
+`rebus` also provides the function `exactly(x)` which is a shortcut for `START %R% x %R% END` that matches only if the string is exactly `x`.
+
+In a regular expression you can use a wildcard to match a single character, no matter what the character is. In `rebus` it is specified with `ANY_CHAR`.
+
+`ANY_CHAR` will only ever match one character.
+
+_Regular expressions are lazy and will take the first match they find._
+
+##### str_view() and str_view_all()
+View HTML rendering of regular expression match.
+
+##### str_extract() and str_extract_all
+Extract matching patterns from a string.
+
+| Pattern                    | Regular Expression | rebus              |
+| -------------------------- | ------------------ | ------------------ |
+| Start of string            | ^                  | START              |
+| End of string              | $                  | END                |
+| Any single character       | .                  | ANY_CHAR           |
+| Literal dot, carat, dollar | \., \^, \$         | DOT, CARAT, DOLLAR |
+
+### Alternation
+The `rebus` function `or()` allows us to specify a set of alternatives, which may be single characters or character strings, to be matched.
+
+### Character classes
+In regular expressions a _character class_ is a way of specifying "match one (and only one) of the following characters". In `rebus` you can specify the set of allowable characters using the function `char_class()`.
+
+A negated character class matches "any single character that isn't one of the following", and in `rebus` is specified with `negated_char_class()`.
+
+Unlike in other places in a regular expression you don't need to escape characters that might otherwise have a special meaning inside character classes. If you want to match `.` you can include `.` directly, e.g. `char_class(".")`. Matching a `-` is a bit trickier. If you need to do it, just make sure it comes first in the character class.
+
+### Repetition
+| Pattern               | Regular Expression | rebus          |
+| --------------------- | ------------------ | -------------- |
+| Optional              | ?                  | optional()     |
+| Zero or more          | *                  | zero_or_more() |
+| One or more           | +                  | one_or_more()  |
+| Between m and n times | {m,n}              | repeated()     | 
+
+### Shortcuts
+Specify a range with a dash inside a character class.
+`DGT`
+`WRD`
+`SPC`
+`DOT`
+`LOWER`
+`OPEN_PAREN`
+`CLOSE_PAREN`
+`dgt(1, 2)` to match one or two digits
+
+##### ls.str()
+List Objects and their Structure
+
+##### str_remove()
+Remove matched patterns in a string.
 
 ## More advanced matching and manipulation
+
+### Capturing
+In `rebus`, to denote a part of a regular expression you want to capture, you surround it with the function `capture()`.
+
+##### str_match()
+Extract matched groups from a string.
+
+### Backreferences
+Backreferences can be useful in matching because they allow you to find repeated patterns or words. Using a backreference requires two things: you need to `capture()`the part of the pattern you want to reference, and then you refer to it with `REF1`.
+
+If you capture more than one thing you can refer to them with `REF2`, `REF3` etc. up to `REF9`, counting the captures from the left of the pattern.
