@@ -48,6 +48,24 @@ Find first non-missing element.
 If NULL (the default), counts the number of rows in each group.
 If a variable, computes sum(wt) for each group.
 
+#### library(maps)
+Display of maps.
+
+#### library(sf)
+A package that provides [simple features access](https://en.wikipedia.org/wiki/Simple_Features) for R.
+
+##### st_to_sf()
+Convert foreign object to an sf object.
+
+##### theme(legend.position =  c(x, y)) 
+c(1,1) = bottom left, c(0, 0) = top right
+
+#### library(gganimate)
+`gganimate` extends the grammar of graphics as implemented by `ggplot2` to include the description of animation
+
+##### transition_manual()
+Create an animation by specifying the frame membership directly.
+
 #### library(shinymetrics)
 
 NOTE: Shinymetrics last updated was April 2020. The "bugs" I have been getting is that the periods use the current Sys.Date() and not the max date of the dataset. This means that most periods are not functional.
