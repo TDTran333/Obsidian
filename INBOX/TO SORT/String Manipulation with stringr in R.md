@@ -106,6 +106,10 @@ Split up a string into pieces. Return a list.
 ##### str_replace() and str_replace_all()
 Replace matched patterns in a string.
 
+`str_replace()` takes three arguments, `string` a vector of strings to do the replacements in, `pattern` that identifies the parts of strings to replace and `replacement` the thing to use as a replacement.
+
+`replacement` can be a vector, the same length as `string`, each element specifies the replacement to be used in each string.
+
 ## Pattern matching with regular expressions
 ### Regular expressions
 *  A language for describing patterns
@@ -163,6 +167,7 @@ Specify a range with a dash inside a character class.
 `LOWER`
 `OPEN_PAREN`
 `CLOSE_PAREN`
+`ASCII_UPPER`
 `dgt(1, 2)` to match one or two digits
 
 ##### ls.str()
@@ -183,3 +188,64 @@ Extract matched groups from a string.
 Backreferences can be useful in matching because they allow you to find repeated patterns or words. Using a backreference requires two things: you need to `capture()`the part of the pattern you want to reference, and then you refer to it with `REF1`.
 
 If you capture more than one thing you can refer to them with `REF2`, `REF3` etc. up to `REF9`, counting the captures from the left of the pattern.
+
+The `replacement` argument to `str_replace()` can also include backreferences. This works just like specifying patterns with backreferences, except the capture happens in the `pattern` argument, and the backreference is used in the `replacement` argument.
+
+### Unicode and pattern matching
+Unicode
+* Associates each character with a code point
+
+Unicode in R
+* \u followed by 4 digits code
+* \U followed by up to 8 digits code
+
+Hexadecimal code
+* as.hexmode(utf9ToInt("symbol"))
+
+Matching Unicode groups
+* Regular expression
+	* Use \p followed by {name}
+* rebus
+	* str_view_all(x, greek and coptic()) 
+
+The `stringi` package that `stringr` is built on contains functions for converting between the two forms. `stri_trans_nfc()` composes characters with combining accents into a single character. `stri_trans_nfd()` decomposes character with accents into separate letter and accent characters.
+
+In Unicode, an accent is known as a _diacritic Unicode Property_, and you can match it using the `rebus` value `UP_DIACRITIC`.
+
+`ANY_CHAR` will only match a character represented by a single code point.
+
+The Unicode standard has a concept of a _grapheme_ that represents a display character, but may be composed of many code points. To match any _grapheme_ you can use `GRAPHEME`.
+
+### Case study
+
+##### readLines()
+Read Text Lines from a Connection.
+
+##### stri_read_lines()
+Reads a text file in its entirety, re-encodes it, and splits it into text lines.
+
+##### stri_isempty()
+Determine if a String is of Length Zero.
+
+##### or1()
+It specifies alternatives but rather than each alternative being an argument like in `or()`, you can pass in a vector of alternatives.
+
+### regex are case sensitive
+#### Changing case to ease matching
+* A simple solution to working with strings in mixed case, is to simply transform them into all lower or all upper case.
+
+##### whole_word()
+`whole_word()` will only match if it occurs as a word on its own.
+
+#### Ignoring case when matching
+
+##### regex()
+The default. Uses ICU regular expressions.
+
+we wrap our pattern in `regex()` and specify the argument `ignore_case = TRUE`
+
+#### Transform string to common case
+You can use `str_to_upper()` and `str_to_lower()`, but there is also `str_to_title()` which transforms to title case, in which every word starts with a capital letter.
+
+##### stri_trans_totitle()
+Allows a specification of the `type` which, by default, is `"word"`, resulting in title case, but can also be `"sentence"` to give sentence case: only the first word in each sentence is capitalized.
