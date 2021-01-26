@@ -81,7 +81,26 @@ The grammar of graphics book (Leland Wilkinson)
 	* Tableau
 	* Vega-Lite
 
+#### General
+* If an aesthetic is linked to data it is put into `aes()`
+* If you simple want to set it to a value, put it outside of `aes()`
+* geoms are drawn in the order they are added.
+
+#### Statistics
+* Linked to geometries
+* Every geom has a default statistic
+* A layer can be created with a call to stat_\*() or geom_\*(), but community has coalesced around geom_\*()
+* If you have precomputed data use identity stat
+* Use after_stat() to modify mapping from stats
+
+##### after_stat()
+Control aesthetic evaluation.
+Use the after_stat() function to flag that evaluation of the aesthetic mapping should be postponed until after stat transformation. Similarly, you should use after_scale() to flag evaluation of mapping for after data has been scaled. 
+
+#### Scales
 
 ### Beyond ggplot2
 
 ### Drawing anything
+
+1:26/2:28
