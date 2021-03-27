@@ -1,4 +1,8 @@
-https://old.reddit.com/r/wallstreetbets/comments/kcs4xy/what_quant_funds_actually_do_tldr_no_it_isnt/
+---
+aliases: Quant
+tags: Finance
+---
+Link: [Website](https://old.reddit.com/r/wallstreetbets/comments/kcs4xy/what_quant_funds_actually_do_tldr_no_it_isnt/)
 
 ### Summary 
 Quants don't do technical analysis.

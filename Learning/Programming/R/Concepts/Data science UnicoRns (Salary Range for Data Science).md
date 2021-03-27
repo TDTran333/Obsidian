@@ -42,7 +42,7 @@ Role-specific salary benchmarking data are from purchased compensation surveys
 * Purpose: Summarize and analyze complex/large data to guide business insights
 * Independently merge and tidy data from multiple source systems, then conduct appropriate summarization or statistical analyses according to business stakeholder needs
 * Use data and visualizations to inform business solutions for organizational leaders
-* Organize databases, analyses, and reports into user-accessable and reproducible repositories
+* Organize databases, analysis, and reports into user-accessible and reproducible repositories
 * Preferred R stack experience: tidyverse including dbplyr, R makrdown, Shiny, caret, etc.
 
 Notes for profile I (entry/junior level):

@@ -2,7 +2,7 @@
 aliases:
 tags:
 ---
-Date: 2021-03-27
+Date: {{tp_today}}
 Media:
 Author:
 Source:

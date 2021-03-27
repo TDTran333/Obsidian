@@ -3,7 +3,7 @@ aliases:
 tags:
 links:
 ---
-Date: 2021-03-27
+Date: {{tp_today}}
 Related:
 Status: #wip 
 
