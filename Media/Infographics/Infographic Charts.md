@@ -1,1 +1,0 @@
-![[Infographic_charts.png]]

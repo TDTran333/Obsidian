@@ -1,1 +1,0 @@
-![[Infographic_typography_and_font.png]]

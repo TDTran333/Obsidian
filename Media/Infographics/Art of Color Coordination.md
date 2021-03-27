@@ -1,1 +1,0 @@
-![[Infographic_art_of_color_coordination.jpg]]

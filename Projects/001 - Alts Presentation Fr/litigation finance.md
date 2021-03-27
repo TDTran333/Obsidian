@@ -1,3 +1,0 @@
-What is litigation finance? In a nutshell, the idea is to fund plaintiffs and law firms in cases where it looks like there will be a winning ruling. When everything goes the right way, the capital that helps fund the lawsuits is returned — and then some — in return for the risk taken. Litigation finance firms — and there’s a growing number of them — basically want to estimate as accurately as possible the risk involved so they can bet on the right horses.
-
-Source: https://techcrunch.com/2019/09/17/this-young-litigation-finance-startup-just-secured-100-million-to-go-after-cases-it-thinks-are-winners/
