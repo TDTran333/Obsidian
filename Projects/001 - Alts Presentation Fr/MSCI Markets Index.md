@@ -1,0 +1,1 @@
+![[MSCI_markets_index.png]]

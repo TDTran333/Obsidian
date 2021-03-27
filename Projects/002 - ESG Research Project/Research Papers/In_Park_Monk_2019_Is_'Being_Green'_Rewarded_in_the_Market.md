@@ -1,0 +1,10 @@
+In, Soh Young, Ki Young Park, and Ashby H. B. Monk. “Is ‘Being Green’ Rewarded in the Market?: An Empirical Investigation of Decarbonization and Stock Returns.” SSRN Scholarly Paper. Rochester, NY: Social Science Research Network, April 16, 2019. https://papers.ssrn.com/abstract=3020304.
+
+> To address this, this study empirically investigates the risk-return relationship of low-carbon investment and characteristics of carbon-efficient firms.
+
+> we construct a carbon efficient-minus-inefficient (EMI) portfolio by carbon efficiency, defined as revenue-adjusted greenhouse gas (GHG) emissions at the firm-level.
+
+> Our EMI portfolio generates positive abnormal returns since 2010 and an investment strategy of "long carbon-efficient firms and short carbon-inefficient firms" would earn abnormal returns of 3.5-5.4% per year.
+## Abstract
+
+Climate change could have potentially devastating effects on societies and economies globally, and climate finance to combat the challenges related to it demands large-scale capital. However, this form of investment has been hampered by the unclear relationship between corporate environmental performance and financial performance. To address this, this study empirically investigates the risk-return relationship of low-carbon investment and characteristics of carbon-efficient firms. Based on 74,486 observations of 736 US firms from January 2005 to December 2015, we construct a carbon efficient-minus-inefficient (EMI) portfolio by carbon efficiency, defined as revenue-adjusted greenhouse gas (GHG) emissions at the firm-level. Our EMI portfolio generates positive abnormal returns since 2010 and an investment strategy of "long carbon-efficient firms and short carbon-inefficient firms" would earn abnormal returns of 3.5-5.4% per year. The only exception is found in small firms. We find that these carbon-efficient firms tend to be "good firms'' in terms of financial characteristics and corporate governance. Our findings are not driven by a small set of industries, variations in oil price, or changing preferences of bond investors caused by the low-interest-rate regime, starting with the 2008 financial crisis.

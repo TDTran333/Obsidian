@@ -1,0 +1,1 @@
+The goal of the Inbox is to gather random notes and incomplete notes to be refined

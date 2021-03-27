@@ -1,0 +1,16 @@
+https://github.com/lockedata/starters
+https://rstudio.github.io/renv/articles/renv.html
+https://github.com/pavopax/new-project-template
+https://github.com/Pakillo/template
+https://rstudio.github.io/rstudio-extensions/rstudio_project_templates.html
+http://projecttemplate.net/getting_started.html
+https://github.com/benmarwick/rrtools
+https://peerj.com/preprints/3192.pdf
+https://towardsdatascience.com/creating-sandbox-environments-for-r-with-docker-def54e3491a3
+https://github.com/drivendata/cookiecutter-data-science
+https://github.com/lazappi/cookiecutter-r-analysis
+https://github.com/dreamRs/addinit
+https://maraaverick.rbind.io/2017/09/r-workflow-fun/
+https://pirategrunt.com/represtools/
+https://stat545.com/r-basics.html
+https://machinelearningmastery.com/machine-learning-project-template-in-r/
