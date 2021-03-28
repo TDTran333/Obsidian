@@ -7,7 +7,7 @@ git rm --cached -r .
 ```
 
 git reset HEAD~n
-
+git reset HEAD~{n}
 ```
 find . -size +100M | cat >> .gitignore
 ```
