@@ -50,4 +50,10 @@ Bitcoin was the first widespread application of blockchain technology. Bitcoin w
 * Semantic web or "read-write-execute” web"
 * intelligently generate and distribute useful content tailored to a particular need of a user with Ai and ML
 * Content is accessible by multiple applications, every device is connected to the web, the services can be used everywhere
-* That vision might not come to 
+* That vision might not come to pass
+* Another vision: construct a peer-to-peer web that lets you do everything you can now, except there would no servers and no authorities to manage the flow of information
+* decentralized net
+
+Ethereum was the first platform for the building of decentralized applications using “smart contracts”—self-executing code that automatically implements the terms of agreements between parties. These contracts have the potential to streamline processes across the business world.
+
+
