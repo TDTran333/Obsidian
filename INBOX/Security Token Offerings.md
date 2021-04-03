@@ -1,0 +1,4 @@
+https://www.allaboutalpha.com/blog/2020/12/27/why-stos-are-not-icos/
+https://papers.ssrn.com/sol3/papers.cfm?abstract_id=3634626
+
+The authors of the new paper, “Security Token Offerings,” start with definitions. Tokens are “digital assets that are issued on a blockchain.” They fall into three groups: security tokens; utility tokens; payment tokens. Security tokens, which are unsurprisingly the sort issued in an STO, involve investment products that fall under the securities laws. An ICO involves _utility_ tokens, which are “aimed at supporting and developing a community-based ecosystem by giving consumptive rights to users.” A _payment_ token is also known as a cryptocurrency.

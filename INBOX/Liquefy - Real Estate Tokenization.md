@@ -1,0 +1,3 @@
+Liquefy brings innovation to investment in real assets with blockchain technology by increasing efficiency in fractional ownership, lowering the barriers of entry to investment, and unlocking liquidity in previously illiquid assets.
+
+Since its establishment in 2018, the company has established landmark use cases in real estate tokenization, including the first real estate asset tokenization case in Hong Kong and the tokenization of a luxury hotel in London.
