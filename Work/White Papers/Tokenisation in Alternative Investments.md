@@ -1,6 +1,6 @@
 ---
 aliases:
-tags: alts, crypto
+tags: alts, blockchain
 ---
 Link: [CAIA](https://caia.org/tokenisation), [Pnb Paribas](https://investors-corner.bnpparibas-am.com/markets/a-new-white-paper-tokenisation-of-alternative-investments/)
 White paper: [[CAIA_Tokenisation_of_Alternatives.pdf]]
