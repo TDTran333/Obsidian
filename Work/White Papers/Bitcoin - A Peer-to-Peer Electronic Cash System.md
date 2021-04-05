@@ -46,3 +46,44 @@ Proof-of-work is essentially one-CPU-one-vote. The majority decision is represen
 To compensate for increasing hardware speed and varying interest in running nodes over time, the proof-of-work difficulty is determined by a moving average targeting an average number of blocks per hour. If they're generated too fast, the difficulty increases.
 
 ### Network
+The steps to run the network are as follows:
+1) New transactions are broadcast to all nodes.
+2) Each node collects new transactions into a block.
+3) Each node works on finding a difficult proof-of-work for its block.
+4) When a node finds a proof-of-work, it broadcasts the block to all nodes.
+5) Nodes accept the block only if all transactions in it are valid and not already spent.
+6) Nodes express their acceptance of the block by working on creating the next block in the
+chain, using the hash of the accepted block as the previous hash.
+
+Nodes always consider the longest chain to be the correct one and will keep working on
+extending it. If two nodes broadcast different versions of the next block simultaneously, some nodes may receive one or the other first. In that case, they work on the first one they received, but save the other branch in case it becomes longer. The tie will be broken when the next proof-of- work is found and one branch becomes longer; the nodes that were working on the other branch will then switch to the longer one.
+
+New transaction broadcasts do not necessarily need to reach all nodes. As long as they reach many nodes, they will get into a block before long. Block broadcasts are also tolerant of dropped messages. If a node does not receive a block, it will request it when it receives the next block and realizes it missed one.
+
+### Incentive
+By convention, the first transaction in a block is a special transaction that starts a new coin owned by the creator of the block. This adds an incentive for nodes to support the network, and provides a way to initially distribute coins into circulation, since there is no central authority to issue them. The steady addition of a constant of amount of new coins is analogous to gold miners expending resources to add gold to circulation. In our case, it is CPU time and electricity that is expended.
+
+The incentive can also be funded with transaction fees. If the output value of a transaction is
+less than its input value, the difference is a transaction fee that is added to the incentive value of the block containing the transaction. Once a predetermined number of coins have entered circulation, the incentive can transition entirely to transaction fees and be completely inflation free.
+
+### Reclaiming Disk Space
+Once the latest transaction in a coin is buried under enough blocks, the spent transactions before it can be discarded to save disk space. To facilitate this without breaking the block's hash, transactions are hashed in a Merkle Tree, with only the root included in the block's hash. Old blocks can then be compacted by stubbing off branches of the tree. The interior hashes do not need to be stored.
+
+### Simplified Payment Verification
+It is possible to verify payments without running a full network node. A user only needs to keep a copy of the block headers of the longest proof-of-work chain, which he can get by querying network nodes until he's convinced he has the longest chain, and obtain the Merkle branch linking the transaction to the block it's timestamped in.
+
+As such, the verification is reliable as long as honest nodes control the network, but is more
+vulnerable if the network is overpowered by an attacker.
+
+Businesses that receive frequent payments will probably still want to
+run their own nodes for more independent security and quicker verification.
+
+### Combining and Splitting Value
+Although it would be possible to handle coins individually, it would be unwieldy to make a
+separate transaction for every cent in a transfer. To allow value to be split and combined,
+transactions contain multiple inputs and outputs. Normally there will be either a single input
+from a larger previous transaction or multiple inputs combining smaller amounts, and at most two outputs: one for the payment, and one returning the change, if any, back to the sender.
+
+### Privacy
+The traditional banking model achieves a level of privacy by limiting access to information to the parties involved and the trusted third party. The necessity to announce all transactions publicly precludes this method, but privacy can still be maintained by breaking the flow of information in another place: by keeping public keys anonymous. The public can see that someone is sending an amount to someone else, but without information linking the transaction to anyone. This is similar to the level of information released by stock exchanges, where the time and size of individual trades, the "tape", is made public, but without telling who the parties were.
+
