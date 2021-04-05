@@ -3,6 +3,7 @@ aliases: Bitcoin
 tags: crypto, blockchain, white_paper
 ---
 Pdf: [[bitcoin.pdf]]
+Link: 
 
 # Bitcoin - A Peer-to-Peer Electronic Cash System
 
@@ -93,6 +94,10 @@ from being linked to a common owner.
 ### Calculations
 We consider the scenario of an attacker trying to generate an alternate chain faster than the honest chain. Even if this is accomplished, it does not throw the system open to arbitrary changes, such as creating value out of thin air or taking money that never belonged to the attacker. Nodes are not going to accept an invalid transaction as payment, and honest nodes will never accept a block containing them. An attacker can only try to change one of his own transactions to take back money he recently spent.
 
+	p = probability an honest node finds the next block
+	q = probability the attacker finds the next block
+	q_z = probability the attacker will ever catch up from z blocks behind
+
 The race between the honest chain and an attacker chain can be characterized as a Binomial Random Walk. Given our assumption that p > q, the probability drops exponentially as the number of blocks the attacker has to catch up with increases. With the odds against him, if he doesn't make a lucky lunge forward early on, his chances become vanishingly small as he falls further behind.
 
 We now consider how long the recipient of a new transaction needs to wait before being
@@ -101,4 +106,8 @@ sufficiently certain the sender can't change the transaction.
 The recipient waits until the transaction has been added to a block and z blocks have been
 linked after it. He doesn't know the exact amount of progress the attacker has made, but
 assuming the honest blocks took the average expected time per block, the attacker's potential progress will be a Poisson distribution.
-To get the probability the attacker could still catch up now, we multiply the Poisson density for each amount of progress he could have made by the probability he could catch up from that point.
+
+To get the probability the attacker could still catch up now, we multiply the Poisson density for each amount of progress he could have made by the probability he could catch up from that point. The probability drop off exponentially with z.
+
+### Conclusion
+We have proposed a system for electronic transactions without relying on trust. We started with the usual framework of coins made from digital signatures, which provides strong control of ownership, but is incomplete without a way to prevent double-spending. To solve this, we proposed a peer-to-peer network using proof-of-work to record a public history of transactions that quickly becomes computationally impractical for an attacker to change if honest nodes control a majority of CPU power. The network is robust in its unstructured simplicity. Nodes work all at once with little coordination. They do not need to be identified, since messages are not routed to any particular place and only need to be delivered on a best effort basis. Nodes can leave and rejoin the network at will, accepting the proof-of-work chain as proof of what happened while they were gone. They vote with their CPU power, expressing their acceptance of valid blocks by working on extending them and rejecting invalid blocks by refusing to work on them. Any needed rules and incentives can be enforced with this consensus mechanism.
