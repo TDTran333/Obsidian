@@ -87,3 +87,18 @@ from a larger previous transaction or multiple inputs combining smaller amounts,
 ### Privacy
 The traditional banking model achieves a level of privacy by limiting access to information to the parties involved and the trusted third party. The necessity to announce all transactions publicly precludes this method, but privacy can still be maintained by breaking the flow of information in another place: by keeping public keys anonymous. The public can see that someone is sending an amount to someone else, but without information linking the transaction to anyone. This is similar to the level of information released by stock exchanges, where the time and size of individual trades, the "tape", is made public, but without telling who the parties were.
 
+As an additional firewall, a new key pair should be used for each transaction to keep them
+from being linked to a common owner.
+
+### Calculations
+We consider the scenario of an attacker trying to generate an alternate chain faster than the honest chain. Even if this is accomplished, it does not throw the system open to arbitrary changes, such as creating value out of thin air or taking money that never belonged to the attacker. Nodes are not going to accept an invalid transaction as payment, and honest nodes will never accept a block containing them. An attacker can only try to change one of his own transactions to take back money he recently spent.
+
+The race between the honest chain and an attacker chain can be characterized as a Binomial Random Walk. Given our assumption that p > q, the probability drops exponentially as the number of blocks the attacker has to catch up with increases. With the odds against him, if he doesn't make a lucky lunge forward early on, his chances become vanishingly small as he falls further behind.
+
+We now consider how long the recipient of a new transaction needs to wait before being
+sufficiently certain the sender can't change the transaction.
+
+The recipient waits until the transaction has been added to a block and z blocks have been
+linked after it. He doesn't know the exact amount of progress the attacker has made, but
+assuming the honest blocks took the average expected time per block, the attacker's potential progress will be a Poisson distribution.
+To get the probability the attacker could still catch up now, we multiply the Poisson density for each amount of progress he could have made by the probability he could catch up from that point.
