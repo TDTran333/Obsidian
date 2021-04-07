@@ -1,10 +1,10 @@
-| [[{{tp_yesterday}}]] | [[Home]] | [[{{tp_tomorrow}}]] |
+| [[<% tp.date.yesterday()%>]] | [[Home]] | [[<% tp.date.tomorrow() %>]] |
 | :------------: | :------: | :------------: |
 
-## {{today}}
+## <% tp.date.now() %> 
 
 ### Daily Quote
-{{tp_daily_quote}}
+<%~ tp.web.daily_quote() %>
 
 ### Today's Note
 
