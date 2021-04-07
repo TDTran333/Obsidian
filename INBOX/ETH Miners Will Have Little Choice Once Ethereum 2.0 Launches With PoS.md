@@ -1,0 +1,1 @@
+https://cointelegraph.com/news/eth-miners-will-have-little-choice-once-ethereum-20-launches-with-pos
