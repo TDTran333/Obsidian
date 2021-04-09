@@ -90,3 +90,64 @@ H×L×T×O≃\[10^33,10^36\]operations
 We can conclude that the computing power available to a posthuman civilization is sufficient to run a huge number of ancestor-simulations even it allocates only a minute fraction of its resources to that purpose. We can draw this conclusion even while leaving a substantial margin of error in all our estimates.
 
 ### The core of the simulation argument
+The basic idea of this paper can be expressed roughly as follows: If there were a substantial chance that our civilization will ever get to the posthuman stage and run many ancestor‐simulations, then how come you are not living in such a simulation?
+
+![[Pasted image 20210409000805.png]]
+
+By inspecting (*) we can then see that at least one of the following three propositions must be true
+
+**(1)** $f_p$≈0⇒
+
+_"The fraction of human-level civilizations that reach a posthuman stage is very close to zero"_
+
+**(2)** $f_I$≈0⇒
+
+_"The fraction of posthuman civilizations that are interested in running ancestor-simulations is very close to zero"_
+
+**(3)** $f_{sim}$≈1⇒
+
+_"The fraction of all people with our kind of experiences that are living in a simulation is very close to one"_
+
+### A bland indifference principle
+We can take a further step and conclude that conditional on the truth of (3), one’s credence in the hypothesis that one is in a simulation should be close to unity. More generally, if we knew that a fraction x of all observers with human‐type experiences live in simulations, and we don’t have any information that indicate that our own particular experiences are any more or less likely than other human‐type experiences to have been implemented in vivo rather than in machina, then our credence that we are in a simulation should equal x. This step is sanctioned by a very weak indifference principle.
+
+It should be stressed that the bland indifference principle expressed by (#) prescribes indifference only between hypotheses about which observer you are, when you have no information about which of these observers you are.
+
+Further, one can consider a sequence of possible situations in which an increasing fraction of all people live in simulations: 98%, 99%, 99.9%, 99.9999%, and so on. As one approaches the limiting case in which everybody is in a simulation (from which one can deductively infer that one is in a simulation oneself), it is plausible to require that the credence one assigns to being in a simulation gradually approach the limiting case of complete certainty in a matching manner.
+
+### Interpretation
+The possibility represented by proposition (1) is fairly straightforward. If (1) is true, then humankind will almost certainly fail to reach a posthuman level; for virtually no species at our level of development become posthuman, and it is hard to see any justification for thinking that our own species will be especially privileged or protected from future disasters.
+
+* Conditional on (1), we must give a high credence to DOOM, the hypothesis that humankind will go
+extinct before reaching a posthuman level.
+	* Perhaps the most natural interpretation of (1) is that we are likely to go extinct as a result of the development of some powerful but dangerous technology.
+* Proposition (1) doesn’t by itself imply that we are likely to go extinct soon, only that we are unlikely to reach a posthuman stage.
+* Another way for (1) to be true is if it is likely that technological civilization will collapse.
+
+In order for (2) to be true, there must be a strong convergence among the courses of advanced civilizations. 
+* One can speculate that advanced civilizations all develop along a trajectory that leads to the recognition of an ethical prohibition against running ancestor‐simulations
+* Another possible convergence point is that almost all individual posthumans in virtually all posthuman civilizations develop in a direction where they lose their desires to run ancestor‐simulations.
+
+One conclusion that follows from (2) is that posthuman societies will be very different from human societies: they will not contain relatively wealthy independent agents who have the full gamut of
+human‐like desires and are free to act on them.
+
+If we are in a simulation (3). Reality may contain many levels.
+In some ways, the posthumans running a simulation are like gods in relation to the people inhabiting the simulation.
+if nobody can be sure that they are at the basement‐level, then everybody would have to consider the possibility that their actions will be rewarded or punished, based perhaps on moral criteria, by their simulators.
+An afterlife would be a real possibility.
+
+In addition to ancestor‐simulations, one may also consider the possibility of more selective simulations that include only a small group of humans or a single individual.
+
+There is also the possibility of simulators abridging certain parts of the mental lives of simulated beings and giving them false memories of the sort of experiences that they would typically have had during the omitted interval.
+
+Properly understood, therefore, the truth of (3) should have no tendency to make us “go crazy” or to prevent us from going about our business and making plans and predictions for tomorrow.
+
+The chief empirical importance of (3) at the current time seems to lie in its role in the tripartite conclusion established above. We may hope that (3) is true since that would decrease the
+probability of (1), although if computational constraints make it likely that simulators would terminate a simulation before it reaches a posthuman level, then out best hope would be that (2) is true.
+
+### Conclusion
+A technologically mature “posthuman” civilization would have enormous computing power. Based on this empirical fact, the simulation argument shows that at least one of the following propositions is true: (1) The fraction of humanlevel civilizations that reach a posthuman stage is very close to zero; (2) The fraction of posthuman civilizations that are interested in running ancestorsimulations is very close to zero; (3) The fraction of all people with our kind of experiences that are living in a simulation is very close to one. 
+
+If (1) is true, then we will almost certainly go extinct before reaching posthumanity. If (2) is true, then there must be a strong convergence among the courses of advanced civilizations so that virtually none contains any relatively wealthy individuals who desire to run ancestor‐simulations and are free to do so. If (3) is true, then we almost certainly live in a simulation. In the dark forest of our current ignorance, it seems sensible to apportion one’s credence roughly evenly between (1), (2), and (3). 
+
+Unless we are now living in a simulation, our descendants will almost certainly never run an ancestor‐simulation.
