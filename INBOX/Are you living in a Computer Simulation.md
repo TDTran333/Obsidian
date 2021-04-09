@@ -4,7 +4,7 @@ tags: philosophy
 ---
 Link: https://fermatslibrary.com/s/are-you-living-in-a-computer-simulation
 pdf: [[simulation.pdf]]
-Other: [Elon musk argument](https://www.youtube.com/watch?v=2KK_kzrJPS8&list=PLKof9YSAshgyPqlK-UUYrHfIQaOzFPSL4)
+Other: [Elon musk argument](https://www.youtube.com/watch?v=2KK_kzrJPS8&list=PLKof9YSAshgyPqlK-UUYrHfIQaOzFPSL4), [Ted-ed](https://www.youtube.com/watch?v=yGfTDcHJHSI)
 
 # Are you living in a Computer Simulation?
 ## ELI5
