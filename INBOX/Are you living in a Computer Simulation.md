@@ -5,6 +5,7 @@ tags: philosophy
 Link: https://fermatslibrary.com/s/are-you-living-in-a-computer-simulation
 pdf: [[simulation.pdf]]
 Other: [Elon musk argument](https://www.youtube.com/watch?v=2KK_kzrJPS8&list=PLKof9YSAshgyPqlK-UUYrHfIQaOzFPSL4), [Ted-ed](https://www.youtube.com/watch?v=yGfTDcHJHSI)
+https://web.stanford.edu/class/symbsys205/BostromReview.html
 
 # Are you living in a Computer Simulation?
 ## ELI5
@@ -151,3 +152,12 @@ A technologically mature “posthuman” civilization would have enormous comput
 If (1) is true, then we will almost certainly go extinct before reaching posthumanity. If (2) is true, then there must be a strong convergence among the courses of advanced civilizations so that virtually none contains any relatively wealthy individuals who desire to run ancestor‐simulations and are free to do so. If (3) is true, then we almost certainly live in a simulation. In the dark forest of our current ignorance, it seems sensible to apportion one’s credence roughly evenly between (1), (2), and (3). 
 
 Unless we are now living in a simulation, our descendants will almost certainly never run an ancestor‐simulation.
+
+#### Review
+ Bostrom asserts that, because we have no reason to believe that either of these possibilities is more likely than the other, we have no reason to change the way we live our lives because of this argument. However, this isn’t quite accurate. If we know that one of the two of these options _must_ be the case, then utility theory tells us that our personal utility that we assign to any particular action should be the weighted utility of this action, given the probability of these two scenarios. In other words, we should live our lives as if we are half sure that we are living in a simulated universe.
+
+ This might entail several things. Assuming that we don’t want the simulation to be turned off (as this would cause us to cease to exist), we should do everything in our power to keep whoever is simulating us interested in the simulation. This might cause us to pursue actions that are more likely to cause very dramatic events to happen. Also, if we believe that our simulators are willing to punish/reward people for certain behavior within the simulation, we should try to figure out what behavior they are going to reward and act on that. Thus, knowing that we are very probably living in a computer simulation should have a profound effect on the way we lead our lives.
+	
+The probability that we assign to our living in a simulated universe is not independent of the prior probability that we assign to the existence of universes other than our own
+
+
