@@ -2,7 +2,7 @@
 aliases:
 tags: philosophy
 ---
-Link: https://fermatslibrary.com/s/are-you-living-in-a-computer-simulation
+Link: [YouTube](https://www.youtube.com/watch?v=tlTKTTt47WE), [Paper](https://fermatslibrary.com/s/are-you-living-in-a-computer-simulation)
 pdf: [[simulation.pdf]]
 Other: [Elon musk argument](https://www.youtube.com/watch?v=2KK_kzrJPS8&list=PLKof9YSAshgyPqlK-UUYrHfIQaOzFPSL4), [Ted-ed](https://www.youtube.com/watch?v=yGfTDcHJHSI)
 https://web.stanford.edu/class/symbsys205/BostromReview.html
@@ -160,4 +160,9 @@ Unless we are now living in a simulation, our descendants will almost certainly 
 	
 The probability that we assign to our living in a simulated universe is not independent of the prior probability that we assign to the existence of universes other than our own
 
-
+#### Kurzgesagt - 5 required assumptions
+1. It is possible to simulate consciousness
+2. Technological progression will not stop anytime soon
+3. Advanced civilization don't destroy themselves
+4. Super advanced civilization want to run simulations
+5. If there are a lot of simulations, you are probably inside one
