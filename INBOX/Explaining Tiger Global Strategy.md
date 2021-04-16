@@ -1,0 +1,1 @@
+https://randle.substack.com/p/playing-different-games
