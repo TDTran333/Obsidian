@@ -10,4 +10,6 @@
 - [ ] Woke up at xxx am
 - [ ] Crypto News
 - [ ] Financial News
+- [ ] Other News
 - [ ] Readings
+- [ ] Videos
