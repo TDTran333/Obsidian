@@ -17,3 +17,27 @@
 -   [Glossary of Cryptocurrency Terms](https://coinmarketcap.com/alexandria/glossary)
 -   [aantonop: Bitcoin for Beginners](https://www.youtube.com/watch?v=UlKZ83REIkA)
 -   [Intro to r/Cryptocurrency MOONs](https://www.reddit.com/r/CryptoCurrency/comments/gj96lb/introducing_rcryptocurrency_moons/)
+
+
+## Other resources
+- [guide what is blockchain a basic understanding so](https://www.reddit.com/r/CryptoCurrency/comments/lnb0sb/guide_what_is_blockchain_a_basic_understanding_so/)
+- [Difference between a coin and a token](https://www.reddit.com/r/CryptoCurrency/comments/mn8662/whats_the_difference_between_a_coin_and_a_token_a/)
+- [mit has a free course uploaded on their website](https://www.reddit.com/r/CryptoCurrency/comments/mmp7kg/mit_has_a_free_course_uploaded_on_their_website/)
+- [For the newcomers: the top 50 Cryptocurrencies, each explained with one sentence.](https://www.reddit.com/r/CryptoCurrency/comments/lg1yhv/for_the_newcomers_the_top_50_cryptocurrencies/)
+- [a beginners guide to cryptocurrency exchanges](https://www.reddit.com/r/CryptoCurrency/comments/ln00i5/a_beginners_guide_to_cryptocurrency_exchanges/)
+- [a beginners guide to cryptocurrency wallets](https://www.reddit.com/r/CryptoCurrency/comments/lkkm0v/a_beginners_guide_to_cryptocurrency_wallets/)
+- [a beginners guide to dyor do your own research](https://www.reddit.com/r/CryptoCurrency/comments/lz1taw/a_beginners_guide_to_dyor_do_your_own_research/)
+- [what is staking a guide for beginners](https://www.reddit.com/r/CryptoCurrency/comments/lrhrz6/what_is_staking_a_guide_for_beginners/)
+- [Binance Earn](https://www.reddit.com/r/CryptoCurrency/comments/mdx4bc/binance_earn_using_binance_to_stake/)
+- [beginners guide to researching crypto projects](https://www.reddit.com/r/CryptoCurrency/comments/lq8ja7/beginners_guide_to_researching_crypto_projects/)
+- [risk management tips for beginners in crypto](https://www.reddit.com/r/CryptoCurrency/comments/ls59k6/risk_management_tips_for_beginners_in_crypto/)
+- [Everyone is a genius in a bull market.](https://www.reddit.com/r/CryptoCurrency/comments/lgrd9p/everyone_is_a_genius_in_a_bull_market/)
+- [Sell walls: What they are, what they do, and how to spot them.](https://www.reddit.com/r/CryptoCurrency/comments/7nqts3/sell_walls_what_they_are_what_they_do_and_how_to/)
+- [When in doubt, zoom out](https://www.reddit.com/r/CryptoCurrency/comments/88c17r/when_in_doubt_zoom_out/)
+- [Don't check your portfolio and prices every 5 minutes. It is not healthy!](https://www.reddit.com/r/CryptoCurrency/comments/l2b0hc/dont_check_your_portfolio_and_prices_every_5/)
+- [Limit Order / Stop Order](https://www.reddit.com/r/CryptoCurrency/comments/byoqad/limit_order_stop_order/)
+- [\[Guide\] With markets rising again, here is a friendly reminder to do your own research, and some tips on how to research!](https://www.reddit.com/r/CryptoCurrency/comments/8c2ebt/guide_with_markets_rising_again_here_is_a/)
+- [GENERAL REMINDER: Backup your Google 2FA codes](https://www.reddit.com/r/CryptoCurrency/comments/7xhiu8/general_reminder_backup_your_google_2fa_codes/)
+- [How a became a millionaire using crypto technical analysis and here is a guide](https://www.reddit.com/r/CryptoCurrency/comments/lhia2b/how_a_became_a_millionaire_using_crypto_technical/) (Theoretics are correct, but its a comedy post)
+
+You can also visit: [simplecryptoguide](https://simplecryptoguide.com/)
