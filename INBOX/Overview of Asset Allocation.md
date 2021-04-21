@@ -66,3 +66,64 @@ The member should be able to:
 
 * Strategic considerations in rebalancing include transaction costs, risk aversion, correlations among asset classes, volatility, and beliefs concerning momentum, taxation, and asset class liquidity.
 
+
+
+
+### THE INVESTMENT GOVERNANCE BACKGROUND TO ASSET ALLOCATION
+#### 3.1 Governance Structures
+Governance hierarchy:
+* Governing investment committee
+* Investment staff
+* Third-party resources
+
+Governance tasks:
+* Articulate the long- and short-term objectives of the investment program.
+* Allocate decision rights and responsibilities among the functional units in the governance hierarchy effectively, taking account of their knowledge, capacity, time, and position in the governance hierarchy.
+* Specify processes for developing and approving the investment policy statement that will govern the day-to- day operations of the investment program.
+* Specify processes for developing and approving the program’s strategic asset allocation.
+* Establish a reporting framework to monitor the program’s progress toward the agreed- on goals and objectives.
+* Periodically undertake a governance audit.
+
+#### 3.2 Articulating Investment Objectives
+Investment objective statement:
+* Defined benefit pension fund. The investment objective of the fund is to ensure that plan assets are sufficient to meet current and future pension liabilities.
+* Endowment fund. The investment objective of the endowment is to earn a rate of return in excess of the return required to fund, after accounting for inflation, ongoing distributions consistent with the endowment’s mission.
+* Individual investor. The investment objective is to provide for retirement at the investor’s desired retirement age, family needs, and bequests, subject to stated risk tolerance and investment constraints.
+
+A return requirement is often considered the essence of an investment objective statement, but for that portion of the objective statement to be properly understood requires additional context.
+
+The ultimate goal is to find the best risk/return trade- off consistent with the asset owner’s resource constraints and risk tolerance.
+
+#### 3.3 Allocation of Rights and Responsibilities
+Allocation of rights and responsibilities across the governance hierarchy is a key element in the success of an investment program. Effective governance requires that the individuals charged with any given decision have the required knowledge and expertise to thoroughly evaluate the alternative courses of action and the capacity to take on the ongoing responsibility of those decisions, and they must be able to execute those decisions in a timely fashion.
+
+![[Allocation of Rights and Responsibilities.png]]
+
+#### 3.4 Investment Policy Statement
+The investment policy statement (IPS) is the foundation of an effective investment program. A well- crafted IPS can serve as a blueprint for ongoing fund management and assures stakeholders that program assets are managed with the appropriate care and diligence.
+
+#### 3.5 Asset Allocation and Rebalancing Policy
+Because of its strategic importance, the investment committee, at the highest level of the governance hierarchy, typically retains approval of the strategic asset allocation decision. A proposal is often developed only after a formal asset allocation study that incorporates obligations, objectives, and constraints; simulates possible investment outcomes over an agreed- on investment horizon; and evaluates the risk and return characteristics of the possible allocation strategies.
+
+#### 3.6 Reporting Framework
+Answer clearly, concisely and accurately:
+* Where are we now?
+* Where are we relative to the goals and objectives?
+* What value has been added or subtracted by management decisions?
+
+**Benchmarking** is necessary for performance measurement, attribution, and evaluation. Effective benchmarking allows the investment committee to evaluate staff and external managers. Two separate levels of benchmarks are appropriate: one that measures the success of the investment managers relative to the purpose for which they were hired and another to measure the gap between the policy portfolio and the portfolio as actually implemented.
+
+**Management reporting**, typically prepared by staff with input from consultants and custodians, provides responsible parties with the information necessary to understand which parts of the portfolio are performing ahead of or behind the plan and why, as well as whether assets are being managed in accordance with investment guidelines.
+
+**Governance reporting**, which addresses strengths and weaknesses in program execution, should be structured in such a way that regular committee meetings can efficiently address any concerns. Although a crisis might necessitate calling an extraordinary meeting, good governance structures minimize this need.
+
+#### 3.7 The Governance Audit
+The purpose of the governance audit is to ensure that the established policies, procedures, and governance structures are effective. The audit should be performed by an independent third party.
+
+Good governance seeks to avoid decision-reversal  risk — the risk of reversing a chosen course of action at exactly the wrong time, the point of maximum loss.
+
+Good investment governance also considers the effect of investment committee member and staff turnover on the durability of the investment program and prevents key person risk.
+
+Blame avoidance (not accepting personal responsibility when appropriate to do so) is a common feature of institutional investors. Good governance works to prevent such behavior.
+
+### THE ECONOMIC BALANCE SHEET AND ASSET ALLOCATION
