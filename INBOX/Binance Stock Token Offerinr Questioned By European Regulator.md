@@ -1,0 +1,1 @@
+https://www.theblockcrypto.com/post/102563/binance-european-regulators-stock-token-offering
