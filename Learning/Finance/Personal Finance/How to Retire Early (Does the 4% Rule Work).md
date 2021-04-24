@@ -1,8 +1,8 @@
 ---
-aliases:
-tags:
+aliases: 4 percent rule, 4%
+tags: finance
 ---
-Link: [YouTube](https://www.youtube.com/watch?v=3BScK-QyWIo)
+Link: [YouTube](https://www.youtube.com/watch?v=3BScK-QyWIo), [YouTube 2](https://www.youtube.com/watch?v=z7rH7h7ljHg)
 
 # How to Retire Early (Does the 4% Rule Work)
 Rule of thumb for retirement.
