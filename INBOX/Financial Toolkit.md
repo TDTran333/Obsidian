@@ -25,3 +25,12 @@ Learnings:
 -   Prepare for a sudden loss of income by setting aside some cash every month for an emergency fund and by knowing where to turn for help
 
 ### 1.3 Expenses
+-   Expenses may be fixed (stay the same every month) or variable (vary from month to month).
+-   The first step in controlling your spending is to get in the habit of tracking your daily expenses so you know how much you spend and what you spend it on.
+-   Reduce unnecessary spending by avoiding impulse buying, making easy lifestyle changes, and making your money go further with the products and services you buy.
+-   Include debt repayment and savings as regular costs in your expense calculations.
+-   When estimating your expenses, be sure to include irregular expenses (those that don't occur regularly) and to add a little extra for unexpected expenses.
+-   Put money for unexpected expenses in a separate account so it is there when you need it.
+
+### 1.4 How to budget
+
