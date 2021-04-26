@@ -1,0 +1,1 @@
+[](https://www.reddit.com/r/PersonalFinanceCanada/comments/hhz8z8/i_built_a_tool_to_calculate_and_compare_income/)
