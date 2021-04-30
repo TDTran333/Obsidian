@@ -19,3 +19,39 @@ Ideally, a crypto coin should maintain its purchasing power and should have the
 ### Reasons for Price Stability
 Two primary reasons for the price stability of fiat currencies are the reserves that back them and the timely market actions by the controlling authorities, like central banks. Since fiat currencies are pegged to an underlying asset, such as gold or forex reserves which act as collateral, their valuations remain free from wild swings.
 
+### Types of StableCoins
+
+-   Gold-Backed
+    -   GOLD
+    -   XAUT
+    -   PAXG
+    -   DGX
+        
+-   Fiat-Collateralized
+    -   Tether
+    -   USDC
+    -   True USD
+    -   Paxos Standard
+    -   Gemini Dollar
+    -   BUSD
+    -   HUSD
+    -   USDS
+    -   BitUSD
+        
+-   Crypto-Fiat Hybrids
+    -   RSV
+    -   FRAX (USDC backed)
+        
+-   Crypto-Collateralized
+    -   AgeUSD/SigmaUSD
+    -   MakerDAO/DAI
+    -   EOSDT
+    -   sUSD
+        
+-   Seigniorage
+    -   UST / LUNA
+    -   xUSD
+    -   BAC (Basis Cash - $ERC20)
+        
+-   DAC
+    -   0byte
