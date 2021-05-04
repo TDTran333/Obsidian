@@ -31,5 +31,57 @@ The basic security measures for your recovery phrase include:
 
 In Metamask, the private keys derived from the recovery phrase are stored in the user’s browser and they are not sent to an external server, for security reasons. The private keys are used to sign transactions in the user’s browser before broadcasting them to the Ethereum network. Metamask allows for creating multiple accounts where each account has its own pair of private and public keys that can be derived from the recovery phrase.
 
+#### Pros and Cons
+Pros:
+-   Non-custodial
+-   An easy to use bridge into Ethereum and DeFi apps
+-   Open-source
+-   Private keys are kept in the user’s browser
 
+Cons:
+-   It is still a “hot” wallet – so the keys are stored on the device that is connected to the Internet which increases the risk
+-   It only supports Ethereum-based assets – this could be a problem for people who want to keep all of their assets in one place.
+
+### Hardware Wallets
+Ledger allows users to store multiple assets including ETH and ERC20 tokens, Bitcoin, Litecoin or Zcash. Ledger, similarly to Metamask, requires users to write down their recovery phrase when setting up the device.
+
+With Ledger, user’s private keys are stored offline on a secure hardware device. This provides full isolation between the private keys and online devices such as computers or smartphones that can be more vulnerable to hacks. This makes it a great option for users that have a significant amount of digital assets.
+
+When it comes to DeFi-friendliness, Ledger has recently added a feature that allows for lending coins on Compound directly from the hardware device via the LedgerLive management app.
+
+Additionally, Metamask allows users to create a separate account that is connected to a hardware wallet, such as Ledger. The account behaves exactly like any other MetaMask account making navigating across multiple DeFi apps super easy. The main difference is that in order to sign a transaction, the hardware device has to be connected to your machine. A ledger device is highly recommended to anyone taking the security of their digital assets seriously.
+
+#### Pros and Cons
+Pros:
+-   Highest degree of security available for the everyday user
+-   Supports a wide range of cryptocurrencies
+-   Integrated with Compound via LedgerLive
+    
+Cons:
+-   The inconvenience of using a separate hardware device
+-   Requires security of the physical device (although each Ledger is also secured by a PIN code)
+
+### Mobile Wallets
+Argent makes interacting with DeFi easy by directly integrating with multiple different DeFi protocols such as Uniswap, Aave, Compound or Set Protocol.
+
+Argent, similarly to the other already mentioned wallets, is non-custodial. When a new wallet is created, Argent creates a smart contract on Ethereum that is controlled by the user of the wallet, so Argent doesn’t have any control over that smart contract at any point. This allows for enabling extra features that wouldn’t be possible to achieve just with a simple Ethereum address.
+
+When it comes to security, Argent uses a different recovery model. Instead of writing down a recovery phrase, users can set up social recovery by choosing “Guardians”. Guardians can be your trusted friends or family members, but also other devices such as hardware wallets, MetaMask or third party services.
+
+In order to recover a wallet, the majority of Guardians have to provide an approval. If the number of Guardians is even, 50% is enough to proceed with the recovery.
+
+#### Pros and Cons
+Pros:
+-   Non-custodial
+-   Doesn’t require a recovery phrase
+-   Integrated with the most popular DeFi protocols
+-   Daily limits and locking option
+
+Cons:
+-   Requires a good understanding of the social recovery model
+-   Still a limited number of DeFi protocols available (cannot just use a new one)
+-   Still not as secure as a hardware wallet
+
+### DeFi Dashboards
+Although they are not strictly wallets, it’s also worth mentioning two apps that make managing a DeFi portfolio much easier: Zapper and Zerion. Both apps allow users to see their portfolio in one place. A user can either connect a wallet, such as Metamask or Ledger, to be able to invest or transfer their assets or they can provide an address/set of addresses to see a portfolio in a view-only mode.
 
