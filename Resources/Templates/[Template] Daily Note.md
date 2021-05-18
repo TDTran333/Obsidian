@@ -14,7 +14,11 @@
 	- 
 - [ ] Other News
 	- 
+- [ ] Local News
+	-
 - [ ] Readings
 	- 
 - [ ] Videos
+	- 
+- [ ] Podcasts
 	- 
