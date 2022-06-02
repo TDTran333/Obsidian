@@ -1,1 +1,0 @@
-The data is split into groups, a function is performed on each group, and the results are summarized.

@@ -1,1 +1,0 @@
-https://espeoblockchain.com/blog/blockchain-gamification

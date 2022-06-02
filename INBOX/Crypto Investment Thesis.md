@@ -1,1 +1,0 @@
-https://a16z.com/crypto/#vertical-landing-investment-thesis

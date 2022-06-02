@@ -1,6 +1,0 @@
----
-tags: R, book
----
-Link: [Website](https://r4ds.had.co.nz/index.html)
-
-# R for Data Science by Hadley Wickham & Garrett Grolemund

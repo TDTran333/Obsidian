@@ -1,1 +1,0 @@
-https://luke.dashjr.org/programs/bitcoin/files/charts/historical.html

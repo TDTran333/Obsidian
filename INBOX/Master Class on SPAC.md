@@ -1,1 +1,0 @@
-https://seekingalpha.com/article/4418045-spac-master-class-live-now-video?mail_subject=must-read-spac-master-class-how-to-take-advantage-of-the-spac-boom

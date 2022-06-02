@@ -1,1 +1,0 @@
-**Synapse**, also called neuronal junction, the site of transmission of electric nerve impulses between two nerve cells (neurons) or between a neuron and a gland or muscle cell (effector). A synaptic connection between a neuron and a muscle cell is called a neuromuscular junction.

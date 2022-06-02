@@ -1,3 +1,0 @@
-purrr::walk()
-
-The walk functions look like they don’t return anything, but they actually return their input _invisibly_. When functions return something invisibly, it just means they don’t print their return value out when you call them. This functionality makes the walk functions useful in pipes. You can call a walk function to perform an action, get your input back, and continue operating on that input.

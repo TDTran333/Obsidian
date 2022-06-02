@@ -1,1 +1,0 @@
-![[Infographic_what_code_should_you_learn.jpg]]

@@ -1,3 +1,0 @@
-Le **financement participatif** est un processus permettant à une personne ou à une entreprise de recueillir de petites sommes auprès d’un grand nombre de personnes, par Internet. L’objectif est de réunir des fonds suffisants pour réaliser un projet précis. Il existe différents types de financement participatif, notamment les dons, la prévente de produits ou le financement participatif en capital. Le présent guide traite du financement participatif en capital. 
-
-Source: https://lautorite.qc.ca/grand-public/investissements/investisseurs-avertis/financement-participatif-crowdfunding/

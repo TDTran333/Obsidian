@@ -1,1 +1,0 @@
-Link: [PDF](HowToReadSciArticle.pdf)

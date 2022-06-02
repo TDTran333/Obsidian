@@ -1,5 +1,0 @@
-- [[[Template] Weekly Note]]
-- [[[Template] Media Note]]
-- [[[Template] Literature Note]]
-- [[[Template] Definition]]
-- [[[Template] Daily Note]]

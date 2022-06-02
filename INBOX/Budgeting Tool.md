@@ -1,1 +1,0 @@
-[](https://themeasureofaplan.com/budget-tracking-tool/)

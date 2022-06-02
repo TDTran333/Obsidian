@@ -1,1 +1,0 @@
-[](https://themeasureofaplan.com/net-worth-scenario-tool/)
